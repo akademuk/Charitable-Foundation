@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Affect';
+    src: url('./../fonts/Affect-Light.eot') format('embedded-opentype'),
+        url('./../fonts/Affect-Light.woff') format('woff'),
+        url('./../fonts/Affect-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Affect';
+    src: url('./../fonts/Affect.eot') format('embedded-opentype'),
+        url('./../fonts/Affect.woff') format('woff'),
+        url('./../fonts/Affect.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Affect';
+    src: url('./../fonts/Affect-Bold.eot') format('embedded-opentype'),
+        url('./../fonts/Affect-Bold.woff') format('woff'),
+        url('./../fonts/Affect-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('./../fonts/AkzidenzGroteskPro-Light.eot') format('embedded-opentype'),
+         url('./../fonts/AkzidenzGroteskPro-Light.woff') format('woff'),
+         url('./../fonts/AkzidenzGroteskPro-Light.woff2') format('woff2'),
+         url('./../fonts/AkzidenzGroteskPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('./../fonts/AkzidenzGroteskPro-Md.eot') format('embedded-opentype'),
+        url('./../fonts/AkzidenzGroteskPro-Md.woff') format('woff'),
+        url('./../fonts/AkzidenzGroteskPro-Md.woff2') format('woff2'),
+        url('./../fonts/AkzidenzGroteskPro-Md.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('./../fonts/AkzidenzGroteskPro-Bold.eot') format('embedded-opentype'),
+        url('./../fonts/AkzidenzGroteskPro-Bold.woff') format('woff'),
+        url('./../fonts/AkzidenzGroteskPro-Bold.woff2') format('woff2'),
+        url('./../fonts/AkzidenzGroteskPro-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}  
+
+
+@font-face {
+    font-family: 'Akzidenz-Grotesk Pro';
+    src: url('./../fonts/AkzidenzGroteskPro-Regular.eot') format('embedded-opentype'),
+        url('./../fonts/AkzidenzGroteskPro-Regular.woff') format('woff'),
+        url('./../fonts/AkzidenzGroteskPro-Regular.woff2') format('woff2'),
+        url('./../fonts/AkzidenzGroteskPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}  
+ 
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('./../fonts/Inter-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('./../fonts/Inter-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('./../fonts/Inter-SemiBold.eot') format('embedded-opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'RedHatMono-Medium';
+    src: url('./../fonts/RedHatMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}  
+
+@font-face {
+    font-family: 'RedHatMono-Regular';
+    src: url('./../fonts/RedHatMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}  

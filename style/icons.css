@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./../fonts/icomoon.eot?bw5em9');
+  src:  url('./../fonts/icomoon.eot?bw5em9#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon.ttf?bw5em9') format('truetype'),
+    url('./../fonts/icomoon.woff?bw5em9') format('woff'),
+    url('./../fonts/icomoon.svg?bw5em9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-NameArrow-down-left:before {
+  content: "\e900";
+}
+.icon-NameArrow-down-right:before {
+  content: "\e901";
+}
+.icon-NameArrow-up-left:before {
+  content: "\e902";
+}
+.icon-NameArrow-up-right:before {
+  content: "\e903";
+}
+.icon-Namecall:before {
+  content: "\e904";
+}
+.icon-NameChevron-down:before {
+  content: "\e905";
+}
+.icon-NameChevron-Left:before {
+  content: "\e906";
+}
+.icon-NameChevron-Right:before {
+  content: "\e907";
+}
+.icon-NameChevron-up:before {
+  content: "\e908";
+}
+.icon-NameCircle-full:before {
+  content: "\e909";
+}
+.icon-NameCircle:before {
+  content: "\e90a";
+}
+.icon-Nameclose:before {
+  content: "\e90b";
+}
+.icon-Namedownload:before {
+  content: "\e90c";
+}
+.icon-Namehome:before {
+  content: "\e90d";
+}
+.icon-Nameload:before {
+  content: "\e90e";
+}
+.icon-Namemail:before {
+  content: "\e90f";
+}
+.icon-Namemenu:before {
+  content: "\e910";
+}
+.icon-Namenewsmode:before {
+  content: "\e911";
+}
+.icon-NamePlus:before {
+  content: "\e912";
+}
+.icon-Namepriority_high:before {
+  content: "\e913";
+}
+.icon-Namequote:before {
+  content: "\e914";
+}
+.icon-Namesend:before {
+  content: "\e915";
+}
+.icon-Nameshare:before {
+  content: "\e916";
+}
