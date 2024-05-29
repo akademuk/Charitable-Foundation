@@ -272,3 +272,51 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper2 = new Swiper('.accordion__content--slider1', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+            el: '.accordion-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.accordion-next',
+            prevEl: '.accordion-prev',
+        },
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper2 = new Swiper('.accordion__content--slider2', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+            el: '.accordion-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.accordion-next',
+            prevEl: '.accordion-prev',
+        },
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const headers = document.querySelectorAll('.accordion__header');
+
+    headers.forEach(header => {
+        header.addEventListener('click', function() {
+            const activeContent = document.querySelector('.accordion__content--active');
+
+            if (activeContent && activeContent !== this.nextElementSibling) {
+                activeContent.classList.remove('accordion__content--active');
+            }
+
+            const content = this.nextElementSibling;
+            content.classList.toggle('accordion__content--active');
+        });
+    });
+});
