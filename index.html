@@ -16,6 +16,12 @@
 </head>
 
 <body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+    <img src="image/logo-text.svg" alt="">
+  </div>
+
   <!-- Фон при открытии меню-->
   <div class="overlay" id="overlay"></div>
 
@@ -621,7 +627,7 @@
       <div class="gallery__box">
         <div class="gallery__box--left">
           <div class="gallery__box--left-top">
-            <img src="image/gallery1.png" alt="" />
+            <video src="image/video-banner.mp4" autoplay muted loop></video>
           </div>
           <div class="swiper-slider gallery-slider gallery__box--left-main">
             <div class="swiper-wrapper">
@@ -645,20 +651,24 @@
           </div>
           <div class="gallery__box--left-bottom">
             <div class="gallery__box--left-bottom-card" data-target="accordion-1">
-              <h3>Повернення депортованих росіянами дітей</h3>
-              <div>
-                <p>
-                  Допомога дітям, переміщеним на територію країни-агресора,
-                  повернутися
-                </p>
-                <button data-target="accordion-1" class="link--yellow"><span
-                    class="icon-NameArrow-down-right"></span>Детальніше</button>
+              <div class="gallery__box--left-bg">
+                <h3>Повернення депортованих росіянами дітей</h3>
+                <div>
+                  <p>
+                    Допомога дітям, переміщеним на територію країни-агресора,
+                    повернутися
+                  </p>
+                  <button data-target="accordion-1" class="link--yellow"><span
+                      class="icon-NameArrow-down-right"></span>Детальніше</button>
+                </div>
               </div>
             </div>
             <div class="gallery__box--left-bottom-card2" data-target="accordion-2">
-              <h3>Психологічна реабілітація дітей військовослужбовців</h3>
-              <button data-target="accordion-2" class="link--black"><span
-                  class="icon-NameArrow-down-right"></span>Детальніше</button>
+              <div class="gallery__box--left-bg">
+                <h3>Психологічна реабілітація дітей військовослужбовців</h3>
+                <button data-target="accordion-2" class="link--black"><span
+                    class="icon-NameArrow-down-right"></span>Детальніше</button>
+              </div>
             </div>
           </div>
         </div>
@@ -1380,54 +1390,205 @@
         <div class="cta__box--right">
           <h2>Підтримайте фонд зараз! 🤝</h2>
           <div class="cta__box--right-text">
-            Ви також можете долучитися до нашої місії і допомогти рятувати наше майбутнє. <br/><br/>
+            Ви також можете долучитися до нашої місії і допомогти рятувати наше майбутнє. <br /><br />
             Кожен ваш донат робить велику справу і дає шанс повернутися до нормального життя більшій кількості дітей!
           </div>
           <div class="cta__box--right-btn">
             <button class="button--yellow donate">зробити донат<span class="icon-NamePlus"></span></button>
-            <button class="button--blue partner-btn">станьте партнером <span class="icon-NameArrow-up-right"></span></button>
+            <button class="button--blue partner-btn">станьте партнером <span
+                class="icon-NameArrow-up-right"></span></button>
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </section>
 
+  <!-- НОВИНИ ТА ЗАХОДИ -->
+  <section class="news">
+    <div class="wrapper">
+      <div class="news__tittle">
+        <h2>НОВИНИ ТА ЗАХОДИ</h2>
+        <a href="#" class="button--blue">до всіх статей<span class="icon-Namenewsmode"></span></a>
+      </div>
+      <div class="news__main">
+        <div class="news__main--big">
+          <div class="news__main--big--bg">
+            <div class="news__main--big--img">
+              <img src="image/image.jpg" alt="image">
+            </div>
+            <div class="news__main--big--content">
+              <div class="news__main--big--content-icon icon-NameArrow-up-right"></div>
+              <div class="news__main--big--content-date">14 грудня 2023 р.</div>
+              <h3>Вечір Відважних: Перше знайомство з нашим проєктом в Києві 10 грудня 2023 року</h3>
+              <p>10 грудня 2023 року в Києві ми провели наше перше знайомство - Вечір Відважних. На якому детально
+                розповідали про наш проєкт, знайомили вас з нашими амбасадорами та партнерами. Презентували напрямки
+                роботи та наше бачення.</p>
+            </div>
+          </div>
+        </div>
+        <div class="news__slider swiper">
+          <div class="news__slider--wrapper swiper-wrapper">
+            <div class="news__slider--item swiper-slide">
+              <div class="news__slider--item-col">
+                <div class="news__slider--item-col-content">
+                  <div class="news__slider--item-col-content-icon icon-NameArrow-up-right"></div>
+                  <div class="news__slider--item-col-content-date">15 квітня 2024 р.</div>
+                  <h3>Запуск нового освітнього проекту для дітей</h3>
+                </div>
+                <div class="news__slider--item-col-img">
+                  <img src="image/image.jpg" alt="image">
+                </div>
+              </div>
+            </div>
+
+            <div class="news__slider--item swiper-slide">
+              <div class="news__slider--item-col">
+                <div class="news__slider--item-col-content">
+                  <div class="news__slider--item-col-content-icon icon-NameArrow-up-right"></div>
+                  <div class="news__slider--item-col-content-date">3 травня 2024 р.</div>
+                  <h3>Партнерство з міжнародною організацією</h3>
+                </div>
+                <div class="news__slider--item-col-img">
+                  <img src="image/image.jpg" alt="image">
+                </div>
+              </div>
+            </div>
+
+            <div class="news__slider--item swiper-slide">
+              <div class="news__slider--item-col">
+                <div class="news__slider--item-col-content">
+                  <div class="news__slider--item-col-content-icon icon-NameArrow-up-right"></div>
+                  <div class="news__slider--item-col-content-date">20 травня 2024 р.</div>
+                  <h3>Відкриття нового центру психологічної підтримки</h3>
+                </div>
+                <div class="news__slider--item-col-img">
+                  <img src="image/image.jpg" alt="image">
+                </div>
+              </div>
+            </div>
+
+            <div class="news__slider--item swiper-slide">
+              <div class="news__slider--item-col">
+                <div class="news__slider--item-col-content">
+                  <div class="news__slider--item-col-content-icon icon-NameArrow-up-right"></div>
+                  <div class="news__slider--item-col-content-date">12 червня 2024 р.</div>
+                  <h3>Успішна історія реабілітації Максима з Маріуполя</h3>
+                </div>
+                <div class="news__slider--item-col-img">
+                  <img src="image/image.jpg" alt="image">
+                </div>
+              </div>
+            </div>
 
 
+          </div>
+          <div class="news__slider--nav">
+            <div class="news__slider--prev">
+              <span class="icon-NameChevron-Left"></span>
+            </div>
+            <div class="news__slider--pagination"></div>
+            <div class="news__slider--next">
+              <span class="icon-NameChevron-Right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__box">
+        <div class="footer__box--left">
+          <div class="footer__box--left-title">
+            <a href="#">
+              <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+            </a>
+            <div class="hero__left--title">
+              <h1>Рятуючи майбутнє,<span>змінюємо</span></h1>
+            </div>
+            <div class="hero__left--button">
+              <a href="#">світ!</a>
+            </div>
+          </div>
+          <div class="footer__box--left-social">
+            <ul class="make-donation__social">
+              <li class="icon-Nameshare"></li>
+              <li>
+                <a href="#" class="link--yellow">facebook</a>
+              </li>
+              <li>
+                <a href="#" class="link--yellow">instagram</a>
+              </li>
+              <li>
+                <a href="#" class="link--yellow">telegram</a>
+              </li>
+            </ul>
+            <p>© 2024 SavedFuture.com.ua - Благодійний фонд «Врятоване майбутнє» All Rights Reserved</p>
+          </div>
+        </div>
+        <div class="footer__box--right">
+          <div class="menu__overlay">
+            <div class="menu__overlay--card partner-btn">
+              <div class="menu__overlay--content">
+                <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png" alt="Emodji" /></span>
+                <h3>Стати нашим партнером</h3>
+              </div>
+            </div>
 
+            <div class="menu__overlay--card donate">
+              <div class="menu__overlay--content">
+                <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png" alt="Emodji" /></span>
+                <h3>Зробити донат</h3>
+              </div>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="menu__overlay--card help-me">
+              <div class="menu__overlay--content">
+                <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png" alt="Emodji" /></span>
+                <h3>Вам потрібна допомога?</h3>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#" class="header__link link--black">головна</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link--black">мета</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link--black">партнери</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link--black">новини</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link--black">звіти</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link--black">команда</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link link--black">контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__box--right-politica">
+            На нашому сайті використовуються файли cookie для оптимізації роботи сайту та надання персоналізованих
+            послуг та реклами. Продовжуючи використання сайту, ви погоджуєтесь з нашими <a href="#">умовами використання
+              файлів cookie</a>. Додаткову інформацію про нашу політику конфіденційності та налаштування файлів cookie
+            можна знайти в розділі <a href="#">Політика конфіденційності</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="shapoval">
+      <img src="image/shapoval.svg" alt="">
+    </a>
+  </footer>
 
   <div class="hidden">
     <div class="team__hidden" id="team">
@@ -1498,58 +1659,6 @@
     </div>
   </div>
 
-  <!-- <div class="form-controls">
-        <div class="control-group">
-            <label>
-                <input type="radio" name="radio" checked>
-                <span class="custom-radio"></span>
-                <div class="control-content">
-                    <h3 class="control-content__title">The quick brown fox jumps over the laz</h3>
-                    <p class="control-content__subtitle">This is a placeholder for the description</p>
-                </div>
-            </label>
-        </div>
-        <div class="control-group">
-            <label>
-                <input type="radio" name="radio">
-                <span class="custom-radio"></span>
-                <div class="control-content">
-                    <h3 class="text--type">Heading goes here</h3>
-                    <p>This is a placeholder for the description</p>
-                </div>
-            </label>
-        </div>
-        <div class="control-group">
-            <label>
-                <input type="checkbox" checked>
-                <span class="custom-checkbox"></span>
-                <div class="control-content">
-                    <h3 class="control-content__title">The quick brown fox jumps over the laz</h3>
-                    <p class="control-content__subtitle">This is a placeholder for the description</p>
-                </div>
-            </label>
-        </div>
-        <div class="control-group">
-            <label>
-                <input type="checkbox">
-                <span class="custom-checkbox"></span>
-                <div class="control-content">
-                    <h3 class="control-content__title">The quick brown fox jumps over the laz</h3>
-                    <p class="control-content__subtitle">This is a placeholder for the description</p>
-                </div>
-            </label>
-        </div>
-        <div class="control-group">
-            <label>
-                <input type="checkbox" class="switch" checked>
-                <span class="custom-switch"></span>
-                <div class="control-content">
-                    <h3 class="control-content__title">The quick brown fox jumps over the laz</h3>
-                    <p class="control-content__subtitle">This is a placeholder for the description</p>
-                </div>
-            </label>
-        </div>
-    </div> -->
 </body>
 
 <script src="script/jquery-3.7.0.min.js"></script>

@@ -261,10 +261,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.gallery-slider', {
         slidesPerView: 1,
         spaceBetween: 10,
+        effect: "fade",
         pagination: {
             el: '.gallery-pagination',
             clickable: true,
         },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            },
         navigation: {
             nextEl: '.gallery-next',
             prevEl: '.gallery-prev',
@@ -276,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const swiper2 = new Swiper('.accordion__content--slider1', {
         slidesPerView: 'auto',
-        spaceBetween: 16,
+        spaceBetween: 17,
         pagination: {
             el: '.accordion-pagination',
             clickable: true,
@@ -285,13 +290,19 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.accordion-next',
             prevEl: '.accordion-prev',
         },
+        breakpoints: {
+            // when window width is >= 320px
+            1280: {
+                spaceBetween: 22,
+            },
+        }
     });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     const swiper3 = new Swiper('.partner__slider', {
         slidesPerView: 'auto',
-        spaceBetween: 8 ,
+        spaceBetween: 8,
         pagination: {
             el: '.partner__pagination',
             clickable: true,
@@ -322,6 +333,44 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.accordion-prev',
         },
     });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const news = new Swiper('.news__slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+            el: '.news__slider--pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.news__slider--next',
+            prevEl: '.news__slider--prev',
+        },
+        breakpoints: {
+            1280: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                pagination: false,
+                navigation: false,
+                simulateTouch: false,
+            },
+        },
+    });
+
+    function checkSlider() {
+        if (window.innerWidth > 1280) {
+            news.destroy(true, true);
+        } else {
+            if (!news.initialized) {
+                news.init();
+            }
+        }
+    }
+
+    window.addEventListener('resize', checkSlider);
+
+    checkSlider();
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -443,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Остановить всплытие клика внутри makeDonation
-        makeDonation.addEventListener('click', function(event) {
+        makeDonation.addEventListener('click', function (event) {
             event.stopPropagation();
         });
     }
@@ -457,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (partnerBtn.length && becomeOurPartner) {
         partnerBtn.forEach(donateButton => {
             donateButton.addEventListener('click', function (event) {
-                event.stopPropagation(); 
+                event.stopPropagation();
                 becomeOurPartner.classList.toggle('open');
                 body.classList.toggle('active');
             });
@@ -477,9 +526,85 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        becomeOurPartner.addEventListener('click', function(event) {
+        becomeOurPartner.addEventListener('click', function (event) {
             event.stopPropagation();
         });
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const help = document.querySelectorAll('.help-me');
+    const needHelp = document.getElementById('needHelp');
+    const body = document.body;
+
+    if (help.length && needHelp) {
+        help.forEach(donateButton => {
+            donateButton.addEventListener('click', function (event) {
+                event.stopPropagation(); // Остановить всплытие события
+                needHelp.classList.toggle('open');
+                body.classList.toggle('active');
+            });
+        });
+
+        // Закрытие при нажатии клавиши ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                needHelp.classList.remove('open');
+                body.classList.remove('active');
+            }
+        });
+
+        // Закрытие при клике вне области блока
+        document.addEventListener('click', function (event) {
+            if (!needHelp.contains(event.target) && !Array.from(help).some(button => button.contains(event.target))) {
+                needHelp.classList.remove('open');
+                body.classList.remove('active');
+            }
+        });
+
+        // Остановить всплытие клика внутри makeDonation
+        needHelp.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const newsSliderWrapper = document.querySelector('.news__slider--wrapper');
+    const newsSliderItems = document.querySelectorAll('.news__slider--item');
+
+    function checkAndRemoveItems() {
+        if (window.innerWidth > 1280) {
+            let totalWidth = 0;
+            newsSliderItems.forEach(item => {
+                item.style.display = ''; // Сбросить видимость элементов
+                totalWidth += item.offsetWidth;
+                if (totalWidth > newsSliderWrapper.offsetWidth) {
+                    item.style.display = 'none'; // Скрыть элемент, если он не помещается
+                }
+            });
+        } else {
+            newsSliderItems.forEach(item => {
+                item.style.display = ''; // Показать все элементы на меньших экранах
+            });
+        }
+    }
+
+    // Проверка на изменение размера окна
+    window.addEventListener('resize', checkAndRemoveItems);
+
+    // Первоначальная проверка
+    checkAndRemoveItems();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('no-scroll');
+
+    setTimeout(function () {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+        document.body.classList.remove('no-scroll');
+    }, 3000);
+});
