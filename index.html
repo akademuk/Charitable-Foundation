@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="image/Favicon.png" />
   <link rel="stylesheet" href="style/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/jquery.fancybox.min.css">
   <link rel="stylesheet" href="style/reset.css" />
   <link rel="stylesheet" href="style/fonts.css" />
   <link rel="stylesheet" href="style/icons.css" />
@@ -66,9 +67,9 @@
           </div>
         </div>
       </div>
-      <div class="video__background">
-        <video src="image/VideoBackground.mp4" autoplay muted loop></video>
-      </div>
+    </div>
+    <div class="video__background">
+      <video src="image/VideoBackground.mp4" autoplay muted loop></video>
     </div>
   </div>
 
@@ -643,19 +644,21 @@
             </div>
           </div>
           <div class="gallery__box--left-bottom">
-            <div class="gallery__box--left-bottom-card">
+            <div class="gallery__box--left-bottom-card" data-target="accordion-1">
               <h3>Повернення депортованих росіянами дітей</h3>
               <div>
                 <p>
                   Допомога дітям, переміщеним на територію країни-агресора,
                   повернутися
                 </p>
-                <a href="#" class="link--yellow"><span class="icon-NameArrow-down-right"></span>Детальніше</a>
+                <button data-target="accordion-1" class="link--yellow"><span
+                    class="icon-NameArrow-down-right"></span>Детальніше</button>
               </div>
             </div>
-            <div class="gallery__box--left-bottom-card2">
+            <div class="gallery__box--left-bottom-card2" data-target="accordion-2">
               <h3>Психологічна реабілітація дітей військовослужбовців</h3>
-              <a href="#" class="link--black"><span class="icon-NameArrow-down-right"></span>Детальніше</a>
+              <button data-target="accordion-2" class="link--black"><span
+                  class="icon-NameArrow-down-right"></span>Детальніше</button>
             </div>
           </div>
         </div>
@@ -763,8 +766,8 @@
     <div class="wrapper">
       <h2>Напрямки</h2>
       <div class="directions__accardion accordion">
-        <div class="accordion__item">
-          <button class="accordion__header">
+        <div class="accordion__item" id="accordion-1">
+          <button class="accordion__header active">
             <p>1</p>
             Повернення депортованих росіянами дітей<span class="icon-NameArrow-up-right"></span>
           </button>
@@ -789,7 +792,7 @@
                       <img src="image/arrow.gif" class="swiper__gif" alt="arrow" />
                     </div>
                   </div>
-                  <div class="swiper-slide accordion__content--none-des">
+                  <div class="swiper-slide">
                     <div class="accordion__content--slide accordion__content--white">
                       <h3>Юридичний супровід:</h3>
                       <p>
@@ -880,7 +883,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
-                    <div class="accordion__content--slide accordion__content--black">
+                    <div class="accordion__content--slide accordion__content--black swiper-slide--open">
                       <div class="accordion__content--black-box">
                         <h3>Приєднатися до нас</h3>
                         <a href="#" class="link--yellow">заповніть заявку<span
@@ -972,7 +975,7 @@
                         </div>
                       </div>
                       <div class="accordion__content--slide-bottom accordion__content--slide-bottom--black">
-                        <div class="accordion__content--slide-text">
+                        <div class="accordion__content--slide-text swiper-slide--open">
                           <div class="accordion__content--slide-text-img">
                             <img src="image/accardion-img7.png" alt="" />
                           </div>
@@ -999,7 +1002,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion__item">
+        <div class="accordion__item" id="accordion-2">
           <button class="accordion__header">
             <p>2</p>
             Психологічна реабілітація дітей військовослужбовців<span class="icon-NameArrow-up-right"></span>
@@ -1008,7 +1011,7 @@
             <div class="accordion__content--box">
               <div class="accordion__content--box-right accordion__content--slider2 swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide accordion__content--none-des">
+                  <div class="swiper-slide">
                     <div class="accordion__content--slide">
                       <p>
                         Фонд приділяє особливу увагу психологічній
@@ -1053,7 +1056,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
-                    <div class="accordion__content--slide accordion__content--black">
+                    <div class="accordion__content--slide accordion__content--black swiper-slide--open">
                       <div class="accordion__content--black-box">
                         <h3>Приєднатися до нас</h3>
                         <a href="#" class="link--yellow">заповніть заявку<span
@@ -1061,26 +1064,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="accordion__content--slide">
-                      <p>
-                        Благодійний фонд активно працює над поверненням дітей,
-                        яких було насильно переміщено на територію
-                        країни-агресора.
-                      </p>
-                      <p>
-                        Цей напрямок охоплює комплексну підтримку дітей після
-                        їх повернення до України.
-                      </p>
-                      <h3 style="font-family: Affect">
-                        Діяльність за напрямком:
-                      </h3>
-                      <img src="image/arrow.gif" class="swiper__gif" alt="arrow" />
-                    </div>
-                  </div>
                   <div class="swiper-slide accordion__content--none">
                     <div class="accordion__content--slide accordion__content--slide--img">
-                        <img src="image/accardion-img5.png" alt="">
+                      <img src="image/accardion-img5.png" alt="">
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none">
@@ -1092,7 +1078,8 @@
                         <div class="accordion__content--slide-text">
                           <h4>Індивідуальні та групові сесії:</h4>
                           <p>
-                            Психологічні сесії з кваліфікованими психологами, проробка травм, пов'язаних з відсутністю або втратою батьків, адаптація до нових життєвих обставин.
+                            Психологічні сесії з кваліфікованими психологами, проробка травм, пов'язаних з відсутністю
+                            або втратою батьків, адаптація до нових життєвих обставин.
                           </p>
                         </div>
                       </div>
@@ -1100,21 +1087,23 @@
                         <div class="accordion__content--slide-text">
                           <h4>Реабілітація:</h4>
                           <p>
-                            Розробка та впровадження спеціалізованихпрограм, що включають новітні терапії: арт, музикальну, ігрову, все це спрямовано на відновлення емоційної рівноваги дітей, розвиток та зміцнення соціальних навичок
+                            Розробка та впровадження спеціалізованихпрограм, що включають новітні терапії: арт,
+                            музикальну, ігрову, все це спрямовано на відновлення емоційної рівноваги дітей, розвиток та
+                            зміцнення соціальних навичок
                           </p>
                         </div>
-                          <div class="accordion__content--slide-bottom accordion__content--slide-bottom--black">
-                            <div class="accordion__content--slide-text">
-                              <div class="accordion__content--slide-text-img">
-                                <img src="image/accardion-img8.png" alt="" />
-                              </div>
-                              <div class="accordion__content--slide-text-tx">
-                                <h4>Приєднатися до нас</h4>
-                                <a href="#" class="link--yellow">заповніть заявку<span
-                                    class="icon-NameArrow-down-right"></span></a>
-                              </div>
+                        <div class="accordion__content--slide-bottom accordion__content--slide-bottom--black">
+                          <div class="accordion__content--slide-text swiper-slide--open">
+                            <div class="accordion__content--slide-text-img">
+                              <img src="image/accardion-img8.png" alt="" />
+                            </div>
+                            <div class="accordion__content--slide-text-tx">
+                              <h4>Приєднатися до нас</h4>
+                              <a href="#" class="link--yellow">заповніть заявку<span
+                                  class="icon-NameArrow-down-right"></span></a>
                             </div>
                           </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1135,6 +1124,379 @@
       </div>
     </div>
   </section>
+
+  <!-- Команда фонду -->
+  <section class="team">
+    <div class="wrapper">
+      <div class="team__left">
+        <div class="team__left--box" data-fancybox data-src="#team">
+          <div class="team__left--box--img">
+            <img src="image/team.jpg" alt="Софія Кравченко">
+          </div>
+          <button>Софія Кравченко<span class="icon-NameArrow-up-right"></span></button>
+        </div>
+      </div>
+      <div class="team__right">
+        <div class="team__right--box">
+          <div class="team__right--box--row" data-fancybox data-src="#team2">
+            <div class="team__right--box--con">
+              <div class="team__right--box--img">
+                <img src="image/team2.jpg" alt="Ірина Бондар">
+              </div>
+              <button>Ірина Бондар<span class="icon-NameArrow-up-right"></span></button>
+            </div>
+          </div>
+          <div class="team__right--box--row" data-fancybox data-src="#team3">
+            <div class="team__right--box--con">
+              <div class="team__right--box--img">
+                <img src="image/team3.jpg" alt="Олександр Мельник">
+              </div>
+              <button>Олександр Мельник<span class="icon-NameArrow-up-right"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="team__right--content">
+          <h2>Команда фонду</h2>
+          <p>Познайомтеся з нашими лідерами, які щодня докладають зусиль, щоб змінити життя на краще.</p>
+          <div>
+            <p>Зустрічайте нашу команду - групу натхненних професіоналів, які присвятили себе благородній місії допомоги
+              дітям, постраждалим від війни. Кожен член нашої команди вносить унікальний вклад у розвиток фонду та
+              реалізацію його програм.</p>
+            <p>
+              Від керівництва стратегічними напрямками до організації заходів та розробки інноваційних проектів - наша
+              команда працює як єдиний механізм для забезпечення світлого майбутнього для кожної дитини. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Вам потрібна допомога? -->
+  <section class="help">
+    <div class="wrapper">
+      <div class="sub-menu__box">
+        <div class="sub-menu__left needHelp__left">
+          <div class="sub-menu__left--title">
+            <h2>Вам потрібна допомога?</h2>
+            <p>
+              Якщо ви або ваші діти перебуваєте на окупованих територіях і у
+              вас немає можливості встановити зв'язок з близькими, будь ласка,
+              залиште свої контактні дані та короткий опис ситуації, і ми
+              оперативно з вами зв'яжемося.
+            </p>
+          </div>
+          <form class="sub-menu__left--form">
+            <div class="sub-menu__left--form--col">
+              <div class="sub-menu__group">
+                <label class="sub-menu__label" for="name">Ваше ім'я</label>
+                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+              </div>
+              <div class="sub-menu__group">
+                <label class="sub-menu__label" for="phone">Телефон</label>
+                <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX)  XXX  XX  XX" />
+              </div>
+              <div class="sub-menu__group">
+                <label class="sub-menu__label" for="email">Email</label>
+                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+              </div>
+            </div>
+            <div class="sub-menu__left--form--col sub-menu__left--form--col2">
+              <label for="textarea">Текст повідомлення</label>
+              <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут"></textarea>
+              <div class="sub-menu__radio">
+                <div class="control-group">
+                  <label>
+                    <input type="radio" name="radio" checked />
+                    <span class="custom-radio"></span>
+                    <p>Питання</p>
+                  </label>
+                </div>
+                <div class="control-group">
+                  <label>
+                    <input type="radio" name="radio" />
+                    <span class="custom-radio"></span>
+                    <p>Проблема</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="sub-menu__group sub-menu__needHelp">
+            <button type="submit" class="button--blue">відправити<span class="icon-Namesend"></span>
+            </button>
+          </div>
+        </div>
+        <div class="sub-menu__right make-donation__right makeDonation__right">
+          <div class="make-donation__right--box">
+            <div class="make-donation__right--top">
+              <h3>Адреса</h3>
+              <ul class="make-donation__nav">
+                <li>
+                  <a href="#">
+                    <span class="icon-Namehome"></span>
+                    вул. Василя Касіяна 2/1, Голосіївський район, Теремки,
+                    Київ, 03006, Україна
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="icon-Namemail"></span>
+                    nadezhda.kievich@example.com
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="icon-Namecall"></span>
+                    +38 093 108 06 87
+                  </a>
+                </li>
+              </ul>
+              <ul class="make-donation__social">
+                <li class="icon-Nameshare"></li>
+                <li>
+                  <a href="#" class="link--black">facebook</a>
+                </li>
+                <li>
+                  <a href="#" class="link--black">instagram</a>
+                </li>
+                <li>
+                  <a href="#" class="link--black">telegram</a>
+                </li>
+              </ul>
+            </div>
+            <div class="make-donation__right--center">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.293856134085!2d30.45970557684722!3d50.37972039245361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8fcaff2a83d%3A0x4d6350338f1890ad!2z0LLRg9C70LjRhtGPINCS0LDRgdC40LvRjyDQmtCw0YHRltGP0L3QsCwgMi8xLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1716812111111!5m2!1suk!2sua"
+                width="706" height="396" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПАРТНЕРИ -->
+  <section class="partner">
+    <div class="wrapper">
+      <h2>ПАРТНЕРИ</h2>
+      <div class="partner__slider swiper">
+        <div class="partner__slider--wrapper swiper-wrapper">
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="partner__slider--item swiper-slide">
+            <div class="partner__slider--item-col">
+              <div class="partner__slider--item-box">
+                <img src="image/Logos.svg" alt="Logos">
+                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                    class="icon-NameArrow-down-right"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="partner__slider--nav">
+          <div class="swiper-button-prev partner__prev">
+            <span class="icon-NameChevron-Left"></span>
+          </div>
+          <div class="swiper-pagination partner__pagination"></div>
+          <div class="swiper-button-next partner__next">
+            <span class="icon-NameChevron-Right"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta -->
+  <section class="cta">
+    <div class="wrapper">
+      <div class="cta__box">
+        <div class="cta__box--left">
+          <img src="image/cta.jpg" alt="">
+        </div>
+        <div class="cta__box--right">
+          <h2>Підтримайте фонд зараз! 🤝</h2>
+          <div class="cta__box--right-text">
+            Ви також можете долучитися до нашої місії і допомогти рятувати наше майбутнє. <br/><br/>
+            Кожен ваш донат робить велику справу і дає шанс повернутися до нормального життя більшій кількості дітей!
+          </div>
+          <div class="cta__box--right-btn">
+            <button class="button--yellow donate">зробити донат<span class="icon-NamePlus"></span></button>
+            <button class="button--blue partner-btn">станьте партнером <span class="icon-NameArrow-up-right"></span></button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hidden">
+    <div class="team__hidden" id="team">
+      <div class="team__hidden--top">
+        <div class="team__hidden--img">
+          <img src="image/team.jpg" alt="">
+        </div>
+        <div class="team__hidden--title">
+          <h3>Софія Кравченко</h3>
+          <p>PR-директор</p>
+        </div>
+      </div>
+      <div class="team__hidden--filter">
+        <p>40+ PR-кампаній</p>
+        <p>Зборів понад 3 мільйони гривень</p>
+        <p>Залучила 100+ волонтерів</p>
+      </div>
+      <div class="team__hidden--text">
+        Ірина відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Її кампанії зі збору
+        коштів не тільки збільшили фінансування фонду, але й підвищили обізнаність суспільства.
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden">
+    <div class="team__hidden" id="team2">
+      <div class="team__hidden--top">
+        <div class="team__hidden--img">
+          <img src="image/team2.jpg" alt="">
+        </div>
+        <div class="team__hidden--title">
+          <h3>Ірина Бондар</h3>
+          <p>PR-директор</p>
+        </div>
+      </div>
+      <div class="team__hidden--filter">
+        <p>40+ PR-кампаній</p>
+        <p>Зборів понад 3 мільйони гривень</p>
+        <p>Залучила 100+ волонтерів</p>
+      </div>
+      <div class="team__hidden--text">
+        Ірина відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Її кампанії зі збору
+        коштів не тільки збільшили фінансування фонду, але й підвищили обізнаність суспільства.
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden">
+    <div class="team__hidden" id="team3">
+      <div class="team__hidden--top">
+        <div class="team__hidden--img">
+          <img src="image/team3.jpg" alt="">
+        </div>
+        <div class="team__hidden--title">
+          <h3>Олександр Мельник</h3>
+          <p>PR-директор</p>
+        </div>
+      </div>
+      <div class="team__hidden--filter">
+        <p>40+ PR-кампаній</p>
+        <p>Зборів понад 3 мільйони гривень</p>
+        <p>Залучила 100+ волонтерів</p>
+      </div>
+      <div class="team__hidden--text">
+        Ірина відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Її кампанії зі збору
+        коштів не тільки збільшили фінансування фонду, але й підвищили обізнаність суспільства.
+      </div>
+    </div>
+  </div>
 
   <!-- <div class="form-controls">
         <div class="control-group">
@@ -1192,6 +1554,7 @@
 
 <script src="script/jquery-3.7.0.min.js"></script>
 <script src="script/swiper-bundle.min.js"></script>
+<script src="script/jquery.fancybox.min.js"></script>
 <script src="script/script.js"></script>
 
 </html>
