@@ -1,40 +1,56 @@
 $(document).ready(function () {
-    initBurgerMenu();
+    initBurgerMenu()
     initCardMenu();
     initDropdownMenu();
 });
 
 // Открытие/закрытие бургер-меню
 function initBurgerMenu() {
-    const burgerMenu = $('#burgerMenu');
-    const burgerMenuIcon = $('#burgerMenuIcon');
-    const burgerMenuOverlay = $('#burgerMenuOverlay');
-    const closeButton = $('.burger-menu__close');
-    const menuItems = $('.burger-menu__item');
+    const burgerMenu = document.getElementById('burgerMenu');
+    const burgerMenuIcon = document.getElementById('burgerMenuIcon');
+    const burgerMenuOverlay = document.getElementById('burgerMenuOverlay');
+    const closeButton = document.querySelector('.burger-menu__close');
+    const menuItems = document.querySelectorAll('.burger-menu__item');
+    const body = document.body;
 
     // Открытие/закрытие бургер-меню
-    burgerMenu.on('click', function () {
-        burgerMenuIcon.toggleClass('open');
-        burgerMenuOverlay.toggleClass('open');
+    burgerMenu.addEventListener('click', function () {
+        burgerMenuIcon.classList.toggle('open');
+        burgerMenuOverlay.classList.toggle('open');
+        body.classList.toggle('active');
     });
 
     // Закрытие бургер-меню при клике на кнопку закрытия
-    closeButton.on('click', function () {
-        burgerMenuIcon.removeClass('open');
-        burgerMenuOverlay.removeClass('open');
+    closeButton.addEventListener('click', function () {
+        burgerMenuIcon.classList.remove('open');
+        burgerMenuOverlay.classList.remove('open');
+        body.classList.remove('active');
     });
 
     // Закрытие бургер-меню при клике на элемент меню
-    menuItems.on('click', function () {
-        burgerMenuIcon.removeClass('open');
-        burgerMenuOverlay.removeClass('open');
+    menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener('click', function () {
+            burgerMenuIcon.classList.remove('open');
+            burgerMenuOverlay.classList.remove('open');
+            body.classList.remove('active');
+        });
     });
 
     // Закрытие бургер-меню при клике вне его
-    burgerMenuOverlay.on('click', function (e) {
-        if ($(e.target).is('#burgerMenuOverlay')) {
-            burgerMenuIcon.removeClass('open');
-            burgerMenuOverlay.removeClass('open');
+    document.addEventListener('click', function (e) {
+        if (!burgerMenu.contains(e.target) && !burgerMenuOverlay.contains(e.target)) {
+            burgerMenuIcon.classList.remove('open');
+            burgerMenuOverlay.classList.remove('open');
+            body.classList.remove('active');
+        }
+    });
+
+    // Закрытие бургер-меню при нажатии на Esc
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            burgerMenuIcon.classList.remove('open');
+            burgerMenuOverlay.classList.remove('open');
+            body.classList.remove('active');
         }
     });
 }
@@ -638,6 +654,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const newsSliderWrapper = document.querySelector('.news__slider--wrapper');
     const newsSliderItems = document.querySelectorAll('.news__slider--item');
 
+    // Проверка наличия элементов
+    if (!newsSliderWrapper || newsSliderItems.length === 0) {
+        console.log('News slider elements not found');
+        return;
+    }
+
     function checkAndRemoveItems() {
         if (window.innerWidth >= 1280) {
             let totalWidth = 0;
@@ -661,6 +683,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Первоначальная проверка
     checkAndRemoveItems();
 });
+
 
 // Loader
 document.addEventListener('DOMContentLoaded', function () {
