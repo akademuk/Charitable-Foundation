@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="image/Favicon.png" />
+    <link rel="stylesheet" href="style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/fonts.css" />
+    <link rel="stylesheet" href="style/icons.css" />
+    <link rel="stylesheet" href="style/command.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Врятоване майбутнє</title>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <span class="loader2"></span>
+        <img src="image/logo-text.svg" alt="">
+    </div>
+
+    <!-- Фон при открытии меню-->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Выпадающий список с помощью-->
+    <div class="card-menu__overlay" id="cardMenuOverlay">
+        <button class="close-btn button--yellow">
+            <span class="icon-Nameclose"></span>
+        </button>
+        <div class="card-menu__wrapper">
+            <div class="card-menu">
+                <h2>допомога</h2>
+                <div class="menu__overlay">
+                    <div class="menu__overlay--card" data-card="card1">
+                        <div class="menu__overlay--content">
+                            <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png"
+                                    alt="Emodji" /></span>
+                            <h3>Стати нашим партнером</h3>
+                            <p>Приєднатися до партнерської програми</p>
+                        </div>
+                        <a href="#" class="menu__overlay--link link--black">почати<span
+                                class="icon-NameChevron-Right"></span></a>
+                    </div>
+
+                    <div class="menu__overlay--card" data-card="card2">
+                        <div class="menu__overlay--content">
+                            <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png"
+                                    alt="Emodji" /></span>
+                            <h3>Зробити донат</h3>
+                            <p>
+                                Допоможіть дітям, які постраждали від війни. Ваш вклад рятує
+                                життя!
+                            </p>
+                            <div class="menu__overlay--btn">
+                                <button>монобанка</button>
+                                <span>або</span>
+                                <button>за реквізитами</button>
+                            </div>
+                        </div>
+                        <a href="#" class="menu__overlay--link link--black">почати<span
+                                class="icon-NameChevron-Right"></span></a>
+                    </div>
+
+                    <div class="menu__overlay--card" data-card="card3">
+                        <div class="menu__overlay--content">
+                            <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png"
+                                    alt="Emodji" /></span>
+                            <h3>Вам потрібна допомога?</h3>
+                            <p>
+                                Зв'яжіться з нами, якщо ви або ваші діти перебуваєте на
+                                окупованій території
+                            </p>
+                        </div>
+                        <a href="#" class="menu__overlay--link link--black">почати<span
+                                class="icon-NameChevron-Right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video__background">
+            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <!-- Выпадающий список с помощью "Стати нашим партнером"-->
+    <div class="sub-menu__overlay" id="becomeOurPartner">
+        <button class="close-btn button--yellow">
+            <span class="icon-Nameclose"></span>
+        </button>
+        <div class="sub-menu">
+            <div class="sub-menu__box">
+                <div class="sub-menu__left">
+                    <div class="sub-menu__left--logo">
+                        <a href="#">
+                            <img src="image/logo--mobile.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        </a>
+                    </div>
+                    <div class="sub-menu__left--title">
+                        <h2>Стати нашим партнером</h2>
+                        <p>
+                            Ви також можете долучитися до нашої місії і допомогти рятувати
+                            наше майбутнє. Кожен ваш донат робить велику справу і дає шанс
+                            повернутися до нормального життя більшій кількості дітей!
+                        </p>
+                    </div>
+                    <form action="" class="sub-menu__left--form">
+                        <div class="sub-menu__group">
+                            <label class="sub-menu__label" for="name">Ваше ім'я</label>
+                            <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                        </div>
+                        <div class="sub-menu__group">
+                            <label class="sub-menu__label" for="phone">Телефон</label>
+                            <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX)  XXX  XX  XX" />
+                        </div>
+                        <div class="sub-menu__group">
+                            <label class="sub-menu__label" for="email">Email</label>
+                            <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+                        </div>
+                        <div class="sub-menu__group">
+                            <button type="submit" class="button--blue">
+                                приєднатися<span class="icon-Namesend"></span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="sub-menu__left--slider">
+                        <p>Вже приєднались:</p>
+                        <div class="sub-menu__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/Logos.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-menu__right">
+                    <img src="image/becomeOurPartner.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="video__background">
+            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <!-- Выпадающий список с помощью "Зробити донат до фонду"-->
+    <div class="sub-menu__overlay make-donation__overlay" id="makeDonation">
+        <button class="close-btn button--yellow">
+            <span class="icon-Nameclose"></span>
+        </button>
+        <div class="sub-menu make-donation">
+            <div class="sub-menu__box">
+                <div class="sub-menu__left make-donation__left">
+                    <div class="sub-menu__left--logo">
+                        <a href="#">
+                            <img src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        </a>
+                    </div>
+                    <div class="sub-menu__left--title">
+                        <h2>
+                            Зробити донат <br />
+                            до фонду
+                        </h2>
+                        <p>
+                            Ваша підтримка може змінити життя дітей, які зіткнулися із
+                            жахами війни. Зробіть донат прямо зараз, допоможіть нам надати
+                            необхідну допомогу та захист. Ваш вклад має значення!
+                            Підтримайте наш фонд і зробіть свій внесок у найкраще майбутнє
+                            для кожної дитини.
+                        </p>
+                    </div>
+                    <form class="make-donation__form">
+                        <div class="make-donation__value">
+                            <label for="value">Сума</label>
+                            <div>
+                                <input type="number" id="value" name="amount" value="0" />
+                                <select id="currency" name="currency" class="currency-selector">
+                                    <option value="UAH">UAH</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="make-donation__amount">
+                            <div class="make-donation__uah make-donation__btn">
+                                <button type="button" class="amount-btn button--transparent" data-amount="200">
+                                    + 200 UAH
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="500">
+                                    + 500 UAH
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="1000">
+                                    + 1000 UAH
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="5000">
+                                    + 5000 UAH
+                                </button>
+                            </div>
+                            <div class="make-donation__usd make-donation__btn">
+                                <button type="button" class="amount-btn button--transparent" data-amount="10">
+                                    + 10 USD
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="25">
+                                    + 25 USD
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="50">
+                                    + 50 USD
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="100">
+                                    + 100 USD
+                                </button>
+                            </div>
+                            <div class="make-donation__eur make-donation__btn">
+                                <button type="button" class="amount-btn button--transparent" data-amount="5">
+                                    + 5 EUR
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="20">
+                                    + 20 EUR
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="50">
+                                    + 50 EUR
+                                </button>
+                                <button type="button" class="amount-btn button--transparent" data-amount="75">
+                                    + 75 EUR
+                                </button>
+                            </div>
+                        </div>
+                        <div class="make-donation__submit">
+                            <p>
+                                Далі Ви будете спрямовані на сторінку введення даних для
+                                здійснення платежу від банку «Монобаню»
+                            </p>
+                            <button type="submit" id="submitBtn" class="button--blue">
+                                приєднатися<span class="icon-Namesend"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sub-menu__right make-donation__right">
+                    <div class="make-donation__right--box">
+                        <div class="make-donation__right--header">
+                            <h2>За реквізитами</h2>
+                            <select name="currency" class="currency-selector">
+                                <option value="UAH">UAH</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                        <div class="make-donation__right--main">
+                            <div class="make-donation__right--group">
+                                <h3>Beneficiary</h3>
+                                <div class="make-donation__right--row">
+                                    <span>Name</span>
+                                    <p>CO "AFFAIR OF THE BRAVE"</p>
+                                </div>
+                                <div class="make-donation__right--row">
+                                    <span>IBAN</span>
+                                    <p>UA773348510000000026007224258</p>
+                                </div>
+                                <div class="make-donation__right--row">
+                                    <span>Currency</span>
+                                    <p>EUR</p>
+                                </div>
+                            </div>
+                            <div class="make-donation__right--group">
+                                <h3>Beneficiary bank</h3>
+                                <div class="make-donation__right--row">
+                                    <span>Bank name</span>
+                                    <p>SWIFT BIC</p>
+                                </div>
+                                <div class="make-donation__right--row">
+                                    <span>FIRST UKRAINIAN INTERNATIONAL BANK</span>
+                                    <p>FUIBUA2X</p>
+                                </div>
+                            </div>
+                            <div class="make-donation__right--group">
+                                <h3>Correspondent Banks</h3>
+                                <div class="make-donation__right--row">
+                                    <span>Bank name</span>
+                                    <p>SWIFT BIC</p>
+                                </div>
+                                <div class="make-donation__right--row">
+                                    <span>Commerzbank AG</span>
+                                    <p>COBADEFF</p>
+                                </div>
+                                <div class="make-donation__right--row">
+                                    <span>Raiffeisen Bank International AG</span>
+                                    <p>RZBAATWW</p>
+                                </div>
+                                <div class="make-donation__right--row">
+                                    <span>Landesbank Baden-Wurttemberg</span>
+                                    <p>SOLADEST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video__background">
+            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <!-- Выпадающий список с помощью "Вам потрібна допомога?"-->
+    <div class="sub-menu__overlay" id="needHelp">
+        <button class="close-btn button--yellow">
+            <span class="icon-Nameclose"></span>
+        </button>
+        <div class="sub-menu">
+            <div class="sub-menu__box">
+                <div class="sub-menu__left needHelp__left">
+                    <div class="sub-menu__left--logo">
+                        <a href="#">
+                            <img src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        </a>
+                    </div>
+                    <div class="sub-menu__left--title">
+                        <h2>Вам потрібна допомога?</h2>
+                        <p>
+                            Якщо ви або ваші діти перебуваєте на окупованих територіях і у
+                            вас немає можливості встановити зв'язок з близькими, будь ласка,
+                            залиште свої контактні дані та короткий опис ситуації, і ми
+                            оперативно з вами зв'яжемося.
+                        </p>
+                    </div>
+                    <form class="sub-menu__left--form">
+                        <div class="sub-menu__left--form--col">
+                            <div class="sub-menu__group">
+                                <label class="sub-menu__label" for="name">Ваше ім'я</label>
+                                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                            </div>
+                            <div class="sub-menu__group">
+                                <label class="sub-menu__label" for="phone">Телефон</label>
+                                <input class="sub-menu__input" type="tel" id="phone"
+                                    placeholder="+38 (0XX)  XXX  XX  XX" />
+                            </div>
+                            <div class="sub-menu__group">
+                                <label class="sub-menu__label" for="email">Email</label>
+                                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+                            </div>
+                        </div>
+                        <div class="sub-menu__left--form--col">
+                            <label for="textarea">Текст повідомлення</label>
+                            <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут"></textarea>
+                            <div class="sub-menu__radio">
+                                <div class="control-group">
+                                    <label>
+                                        <input type="radio" name="radio" checked />
+                                        <span class="custom-radio"></span>
+                                        <p>Питання</p>
+                                    </label>
+                                </div>
+                                <div class="control-group">
+                                    <label>
+                                        <input type="radio" name="radio" />
+                                        <span class="custom-radio"></span>
+                                        <p>Проблема</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="sub-menu__group sub-menu__needHelp">
+                        <button type="submit" class="button--blue">
+                            приєднатися<span class="icon-Namesend"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sub-menu__right make-donation__right makeDonation__right">
+                    <div class="make-donation__right--box">
+                        <div class="make-donation__right--top">
+                            <h3>Адреса</h3>
+                            <ul class="make-donation__nav">
+                                <li>
+                                    <a href="#">
+                                        <span class="icon-Namehome"></span>
+                                        вул. Василя Касіяна 2/1, Голосіївський район, Теремки,
+                                        Київ, 03006, Україна
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <span class="icon-Namemail"></span>
+                                        nadezhda.kievich@example.com
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <span class="icon-Namecall"></span>
+                                        +38 093 108 06 87
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="make-donation__social">
+                                <li class="icon-Nameshare"></li>
+                                <li>
+                                    <a href="#" class="link--black">facebook</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link--black">instagram</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link--black">telegram</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="make-donation__right--center">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.293856134085!2d30.45970557684722!3d50.37972039245361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8fcaff2a83d%3A0x4d6350338f1890ad!2z0LLRg9C70LjRhtGPINCS0LDRgdC40LvRjyDQmtCw0YHRltGP0L3QsCwgMi8xLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1716812111111!5m2!1suk!2sua"
+                                width="706" height="396" style="border: 0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video__background">
+            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <!-- Бургер меню -->
+    <div class="burger-menu__overlay" id="burgerMenuOverlay">
+        <div class="burger-menu__scroll">
+            <div class="burger-menu__headeer">
+                <a href="#">
+                    <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+                </a>
+                <button class="burger-menu__close button--yellow">
+                    <span class="icon-Nameclose"></span>
+                </button>
+            </div>
+            <div class="burger-menu__main">
+                <nav class="burger-menu__nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="burger-menu__item">Головна</a>
+                        </li>
+                        <li>
+                            <a href="index.html#meta" class="burger-menu__item">Мета</a>
+                        </li>
+                        <li>
+                            <a href="index.html#partner" class="burger-menu__item">Партнери</a>
+                        </li>
+                        <li>
+                            <a href="index.html#news" class="burger-menu__item">Новини</a>
+                        </li>
+                        <li>
+                            <a href="reports.html" class="burger-menu__item">Звіти</a>
+                        </li>
+                        <li>
+                            <a href="index.html#team" class="burger-menu__item">Команда</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="burger-menu__item">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="burger-menu__footer">
+                <div class="header__dropdown">
+                    <button class="header__btn burger-menu__footer--btn">
+                        Допомогти <span class="icon-NamePlus"></span>
+                    </button>
+                    <div class="header__dropdown--menu">
+                        <a href="mailto:rescuedifuture@gmail.com" class="header__dropdown--item"><span>Гаряча
+                                лінія</span>+38 093
+                            108 06 87</a>
+                        <a href="mailto:rescuedifuture@gmail.com"
+                            class="header__dropdown--item"><span>Email</span>rescuedfuture@gmail.com</a>
+                        <a href="https://facebook.com/rescuedifuture" class="header__dropdown--item"
+                            target="_blank"><span>Facebook</span>@rescuedfuture</a>
+                        <a href="https://instagram.com/rescuedifuture" class="header__dropdown--item"
+                            target="_blank"><span>instagram</span>@rescuedfuture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="video__background">
+            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+        </div>
+        <div class="wrapper">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a href="#">
+                        <img src="image/logo--blue.svg" alt="Врятоване майбутнє" class="logo__image" />
+                    </a>
+                </div>
+                <nav class="header__nav nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="index.html" class="header__link link--black">головна</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="index.html#meta" class="header__link link--black">мета</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="index.html#partner" class="header__link link--black">партнери</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="index.html#news" class="header__link link--black">новини</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="reports.html" class="header__link link--black">звіти</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="index.html#team" class="header__link link--black">команда</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="contact.html" class="header__link link--black">контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__info">
+                    <div class="header__hotline">
+                        <div class="header__dropdown">
+                            <button class="header__dropdown--toggle">
+                                +38 093 108 06 87
+                            </button>
+                            <div class="header__dropdown--menu">
+                                <a href="mailto:rescuedifuture@gmail.com"
+                                    class="header__dropdown--item"><span>Email</span>rescuedfuture@gmail.com</a>
+                                <a href="https://facebook.com/rescuedifuture" class="header__dropdown--item"
+                                    target="_blank"><span>Facebook</span>@rescuedfuture</a>
+                                <a href="https://instagram.com/rescuedifuture" class="header__dropdown--item"
+                                    target="_blank"><span>instagram</span>@rescuedfuture</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__donate">
+                        <button class="header__btn button--yellow">
+                            допомогти <span class="icon-NamePlus"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__menu button--yellow" id="burgerMenu">
+                    <span>меню</span>
+                    <div class="header__menu--icon" id="burgerMenuIcon">
+                        <span class="header__menu--icon-line"></span>
+                        <span class="header__menu--icon-line"></span>
+                        <span class="header__menu--icon-line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Privecy</h1>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box--left">
+                    <div class="footer__box--left-title">
+                        <a href="index.html">
+                            <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        </a>
+                        <div class="hero__left--title">
+                            <h1>Рятуючи майбутнє,<span>змінюємо</span></h1>
+                        </div>
+                        <div class="hero__left--button">
+                            <a href="#">світ!</a>
+                        </div>
+                    </div>
+                    <div class="footer__box--left-social">
+                        <ul class="make-donation__social">
+                            <li class="icon-Nameshare"></li>
+                            <li>
+                                <a href="#" class="link--yellow">facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link--yellow">instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link--yellow">telegram</a>
+                            </li>
+                        </ul>
+                        <p>© 2024 SavedFuture.com.ua - Благодійний фонд «Врятоване майбутнє» All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="footer__box--right">
+                    <div class="menu__overlay">
+                        <div class="menu__overlay--card partner-btn">
+                            <div class="menu__overlay--content">
+                                <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png"
+                                        alt="Emodji" /></span>
+                                <h3>Стати нашим партнером</h3>
+                            </div>
+                        </div>
+
+                        <div class="menu__overlay--card donate">
+                            <div class="menu__overlay--content">
+                                <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png"
+                                        alt="Emodji" /></span>
+                                <h3>Зробити донат</h3>
+                            </div>
+                        </div>
+
+                        <div class="menu__overlay--card help-me">
+                            <div class="menu__overlay--content">
+                                <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png"
+                                        alt="Emodji" /></span>
+                                <h3>Вам потрібна допомога?</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="index.html" class="header__link link--black">головна</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="index.html#meta" class="header__link link--black">мета</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="index.html#partner" class="header__link link--black">партнери</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="index.html#news" class="header__link link--black">новини</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="reports.html" class="header__link link--black">звіти</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="index.html#team" class="header__link link--black">команда</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="contact.html" class="header__link link--black">контакти</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__box--right-politica">
+                        На нашому сайті використовуються файли cookie для оптимізації роботи сайту та надання
+                        персоналізованих
+                        послуг та реклами. Продовжуючи використання сайту, ви погоджуєтесь з нашими <a
+                            href="cookie.html" target="_blank">умовами використання
+                            файлів cookie</a>. Додаткову інформацію про нашу політику конфіденційності та налаштування
+                        файлів cookie
+                        можна знайти в розділі <a href="privecy.html" target="_blank">Політика конфіденційності</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://shapoval.agency/?utm_source=dev&utm_medium=site&utm_campaign=yellow.sm.studio" class="shapoval"
+            target="_blank">
+            <img src="image/shapoval.svg" alt="">
+        </a>
+    </footer>
+
+</body>
+
+<script src="script/jquery-3.7.0.min.js"></script>
+<script src="script/swiper-bundle.min.js"></script>
+<script src="script/jquery.fancybox.min.js"></script>
+<script src="script/script.js"></script>
+
+</html>

@@ -4,6 +4,7 @@ $(document).ready(function () {
     initDropdownMenu();
 });
 
+// Открытие/закрытие бургер-меню
 function initBurgerMenu() {
     const burgerMenu = $('#burgerMenu');
     const burgerMenuIcon = $('#burgerMenuIcon');
@@ -38,8 +39,7 @@ function initBurgerMenu() {
     });
 }
 
-
-
+// Открытие меню карточек при клике на кнопку "допомогти"
 function initCardMenu() {
     const donateLink = $('.header__btn');
     const cardMenuOverlay = $('#cardMenuOverlay');
@@ -129,11 +129,13 @@ function initCardMenu() {
     });
 }
 
+// Открытие меню контактов при клике на кнопку "Горячая линия"
 function initDropdownMenu() {
     const dropdownToggle = $('.header__dropdown--toggle');
     const dropdownMenu = $('.header__dropdown--menu');
     const dropdownItems = $('.header__dropdown--item');
     let isAnimating = false;
+    let closeTimeout;
 
     dropdownToggle.on('click', function () {
         if (isAnimating) return;
@@ -186,6 +188,26 @@ function initDropdownMenu() {
         }
     });
 
+    // Закрытие меню при убирании курсора
+    dropdownMenu.on('mouseleave', function () {
+        if (dropdownMenu.hasClass('show') && !isAnimating) {
+            closeTimeout = setTimeout(function () {
+                isAnimating = true;
+                const duration = 100;
+
+                hideDropdownItems(dropdownItems, duration, function () {
+                    dropdownMenu.removeClass('show');
+                    dropdownToggle.removeClass('active');
+                    isAnimating = false;
+                });
+            }, 300); // задержка для закрытия меню
+        }
+    });
+
+    dropdownMenu.on('mouseenter', function () {
+        clearTimeout(closeTimeout); // отменяем закрытие меню, если курсор снова наведён на меню
+    });
+
     function showDropdownItems($items, duration, callback) {
         $items.each(function (index) {
             $(this).delay(index * duration).queue(function (next) {
@@ -207,19 +229,24 @@ function initDropdownMenu() {
     }
 }
 
+// Swiper slider в блоке Стати нашим партнером
 document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper(".sub-menu__slider", {
-        spaceBetween: 9,
-        slidesPerView: "auto",
-        loop: true,
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-        },
-    });
+    var swiperElement = document.querySelector(".sub-menu__slider");
+    
+    if (swiperElement) {
+        var swiper = new Swiper(swiperElement, {
+            spaceBetween: 9,
+            slidesPerView: "auto",
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        });
+    }
 });
 
-
+// Меняем валюту вместе с суммой на выбор в блоке Зробити донат до фонду       
 document.addEventListener('DOMContentLoaded', () => {
     const amountInput = document.getElementById('value');
     const currencySelector = document.getElementById('currency');
@@ -256,180 +283,207 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
+// Swiper slider в блоке Галерея под Hero
 document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.gallery-slider', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        effect: "fade",
-        pagination: {
-            el: '.gallery-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+    const swiperElements = document.querySelectorAll('.gallery-slider');
+    
+    swiperElements.forEach(function(swiperElement) {
+        new Swiper(swiperElement, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            effect: "fade",
+            pagination: {
+                el: swiperElement.querySelector('.gallery-pagination'),
+                clickable: true,
             },
-        navigation: {
-            nextEl: '.gallery-next',
-            prevEl: '.gallery-prev',
-        },
-        loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: swiperElement.querySelector('.gallery-next'),
+                prevEl: swiperElement.querySelector('.gallery-prev'),
+            },
+            loop: true,
+        });
     });
 });
 
+// Swiper slider в блоке Напрямки
 document.addEventListener('DOMContentLoaded', function () {
-    const swiper2 = new Swiper('.accordion__content--slider1', {
-        slidesPerView: 'auto',
-        spaceBetween: 17,
-        pagination: {
-            el: '.accordion-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.accordion-next',
-            prevEl: '.accordion-prev',
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            1280: {
-                spaceBetween: 22,
+    const swiperElements = document.querySelectorAll('.accordion__content--slider1');
+    
+    swiperElements.forEach(function(swiperElement, index) {
+        new Swiper(swiperElement, {
+            slidesPerView: 'auto',
+            spaceBetween: 17,
+            pagination: {
+                el: swiperElement.querySelector(`.accordion-pagination${index + 1}`),
+                clickable: true,
             },
+            navigation: {
+                nextEl: swiperElement.querySelector(`.accordion-next${index + 1}`),
+                prevEl: swiperElement.querySelector(`.accordion-prev${index + 1}`),
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 22,
+                },
+            }
+        });
+    });
+});
+
+// Swiper slider в блоке Партнеры
+document.addEventListener('DOMContentLoaded', function () {
+    const swiperElement = document.querySelector('.partner__slider');
+    
+    if (swiperElement) {
+        const swiper3 = new Swiper(swiperElement, {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            pagination: {
+                el: '.partner__pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.partner__next',
+                prevEl: '.partner__prev',
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 24,
+                },
+            }
+        });
+    }
+});
+
+// Swiper slider в блоке Напрямки
+document.addEventListener('DOMContentLoaded', function () {
+    const swiperElements = document.querySelectorAll('.accordion__content--slider2');
+
+    swiperElements.forEach((swiperElement) => {
+        if (swiperElement) {
+            const swiper2 = new Swiper(swiperElement, {
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                pagination: {
+                    el: swiperElement.querySelector('.accordion-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: swiperElement.querySelector('.accordion-next'),
+                    prevEl: swiperElement.querySelector('.accordion-prev'),
+                },
+            });
         }
     });
 });
 
+// Swiper slider в блоке Новости на мобильном
 document.addEventListener('DOMContentLoaded', function () {
-    const swiper3 = new Swiper('.partner__slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 8,
-        pagination: {
-            el: '.partner__pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.partner__next',
-            prevEl: '.partner__prev',
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            1280: {
-                spaceBetween: 24,
+    const newsElement = document.querySelector('.news__slider');
+
+    if (newsElement) {
+        const news = new Swiper(newsElement, {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            pagination: {
+                el: '.news__slider--pagination',
+                clickable: true,
             },
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper2 = new Swiper('.accordion__content--slider2', {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        pagination: {
-            el: '.accordion-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.accordion-next',
-            prevEl: '.accordion-prev',
-        },
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const news = new Swiper('.news__slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        pagination: {
-            el: '.news__slider--pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.news__slider--next',
-            prevEl: '.news__slider--prev',
-        },
-        breakpoints: {
-            1280: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                pagination: false,
-                navigation: false,
-                simulateTouch: false,
+            navigation: {
+                nextEl: '.news__slider--next',
+                prevEl: '.news__slider--prev',
             },
-        },
-    });
+            breakpoints: {
+                1280: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: false,
+                    navigation: false,
+                    simulateTouch: false,
+                },
+            },
+        });
 
-    function checkSlider() {
-        if (window.innerWidth > 1280) {
-            news.destroy(true, true);
-        } else {
-            if (!news.initialized) {
-                news.init();
+        function checkSlider() {
+            if (window.innerWidth > 1280) {
+                if (news.initialized) {
+                    news.destroy(true, true);
+                }
+            } else {
+                if (!news.initialized) {
+                    news.init();
+                }
             }
         }
+
+        window.addEventListener('resize', checkSlider);
+
+        checkSlider();
     }
-
-    window.addEventListener('resize', checkSlider);
-
-    checkSlider();
 });
 
+// Аккардион в блоке Напрямки
 document.addEventListener('DOMContentLoaded', function () {
+    // Инициализация аккордеона
     const headers = document.querySelectorAll('.accordion__header');
 
-    headers.forEach(header => {
-        header.addEventListener('click', function () {
-            const activeContent = document.querySelector('.accordion__content--active');
-            const activeHeader = document.querySelector('.accordion__header.active');
+    if (headers.length > 0) {
+        headers.forEach(header => {
+            header.addEventListener('click', function () {
+                const activeContent = document.querySelector('.accordion__content--active');
+                const activeHeader = document.querySelector('.accordion__header.active');
 
-            if (activeContent && activeContent !== this.nextElementSibling) {
-                activeContent.classList.remove('accordion__content--active');
-            }
+                // Закрываем текущий активный аккордеон, если он не тот же, что был нажат
+                if (activeContent && activeContent !== this.nextElementSibling) {
+                    activeContent.classList.remove('accordion__content--active');
+                }
+                if (activeHeader && activeHeader !== this) {
+                    activeHeader.classList.remove('active');
+                }
 
-            if (activeHeader && activeHeader !== this) {
-                activeHeader.classList.remove('active');
-            }
-
-            const content = this.nextElementSibling;
-            content.classList.toggle('accordion__content--active');
-            if (content.classList.contains('accordion__content--active')) {
-                this.classList.add('active');
-            } else {
-                this.classList.remove('active');
-            }
+                // Переключаем класс active на нажатом аккордеоне
+                const content = this.nextElementSibling;
+                content.classList.toggle('accordion__content--active');
+                this.classList.toggle('active', content.classList.contains('accordion__content--active'));
+            });
         });
-    });
+    }
 
+    // Инициализация кликабельных карточек галереи
     const galleryCards = document.querySelectorAll('.gallery__box--left-bottom-card, .gallery__box--left-bottom-card2');
 
-    galleryCards.forEach(card => {
-        card.addEventListener('click', function () {
-            const targetId = this.getAttribute('data-target');
-            const targetAccordionItem = document.getElementById(targetId);
+    if (galleryCards.length > 0) {
+        galleryCards.forEach(card => {
+            card.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const targetAccordionItem = document.getElementById(targetId);
 
-            if (targetAccordionItem) {
-                // Закрываем все открытые аккордеоны и удаляем класс active с заголовков
-                const activeContents = document.querySelectorAll('.accordion__content--active');
-                const activeHeaders = document.querySelectorAll('.accordion__header.active');
-                activeContents.forEach(content => {
-                    content.classList.remove('accordion__content--active');
-                });
-                activeHeaders.forEach(header => {
-                    header.classList.remove('active');
-                });
+                if (targetAccordionItem) {
+                    // Закрываем все открытые аккордеоны и удаляем класс active с заголовков
+                    const activeContents = document.querySelectorAll('.accordion__content--active');
+                    const activeHeaders = document.querySelectorAll('.accordion__header.active');
+                    activeContents.forEach(content => content.classList.remove('accordion__content--active'));
+                    activeHeaders.forEach(header => header.classList.remove('active'));
 
-                // Прокручиваем к нужному блоку
-                targetAccordionItem.scrollIntoView({ behavior: 'smooth' });
+                    // Прокручиваем к нужному блоку
+                    targetAccordionItem.scrollIntoView({ behavior: 'smooth' });
 
-                // Раскрываем нужный блок аккордеона и добавляем класс active заголовку
-                const header = targetAccordionItem.querySelector('.accordion__header');
-                const content = targetAccordionItem.querySelector('.accordion__content');
-                content.classList.add('accordion__content--active');
-                header.classList.add('active');
-            }
+                    // Раскрываем нужный блок аккордеона и добавляем класс active заголовку
+                    const header = targetAccordionItem.querySelector('.accordion__header');
+                    const content = targetAccordionItem.querySelector('.accordion__content');
+                    content.classList.add('accordion__content--active');
+                    header.classList.add('active');
+                }
+            });
         });
-    });
+    }
 });
 
+// Открытие подменю карточки Стати нашим партнером в слайдере который в аккардионе 1
 document.addEventListener('DOMContentLoaded', function () {
     const swiperSlides = document.querySelectorAll('.swiper-slide--open');
     const subMenuOverlay = document.getElementById('becomeOurPartner');
@@ -461,6 +515,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Открытие подменю карточки Підтримайте фонд зараз!
 document.addEventListener('DOMContentLoaded', function () {
     const donate = document.querySelectorAll('.donate');
     const makeDonation = document.getElementById('makeDonation');
@@ -498,6 +553,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Открытие подменю карточки Підтримайте фонд зараз!
 document.addEventListener('DOMContentLoaded', function () {
     const partnerBtn = document.querySelectorAll('.partner-btn');
     const becomeOurPartner = document.getElementById('becomeOurPartner');
@@ -532,6 +588,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Открытие подменю карточки в футере
 document.addEventListener('DOMContentLoaded', function () {
     const help = document.querySelectorAll('.help-me');
     const needHelp = document.getElementById('needHelp');
@@ -569,6 +626,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Количество карточек при адаптиве в блоке Новости
 document.addEventListener('DOMContentLoaded', function () {
     const newsSliderWrapper = document.querySelector('.news__slider--wrapper');
     const newsSliderItems = document.querySelectorAll('.news__slider--item');
@@ -597,6 +655,7 @@ document.addEventListener('DOMContentLoaded', function () {
     checkAndRemoveItems();
 });
 
+// Loader
 document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('no-scroll');
 
@@ -607,4 +666,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         document.body.classList.remove('no-scroll');
     }, 3000);
+});
+
+// Плавный скрол к якорю
+jQuery(document).ready(function ($) {
+	// Плавный переход к якорю для ссылок на той же странице
+	$('a[href^="#"]').on('click', function (event) {
+		event.preventDefault();
+		var target = $(this.hash);
+		if (target.length) {
+			$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 800);
+		}
+	});
+
+	// Плавный переход к якорю для ссылок на других страницах
+	$('a[href*="index.html#"]').on('click', function (event) {
+		event.preventDefault();
+		var href = $(this).attr('href');
+		var targetId = href.substring(href.indexOf('#'));
+		var target = $(targetId);
+
+		if (target.length) {
+			$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 800);
+		} else {
+			window.location.href = href;
+		}
+	});
 });
