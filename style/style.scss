@@ -523,7 +523,7 @@ input.switch:checked+.custom-switch::before {
         button {
             border-radius: 99px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 8px;
         }
     }
@@ -2939,6 +2939,7 @@ input.switch:checked+.custom-switch::before {
                     width: 406px;
                     height: 493px;
                     border-radius: 20px;
+                    flex: 1 0 0;
                 }
 
                 img {
@@ -2975,6 +2976,9 @@ input.switch:checked+.custom-switch::before {
                         width: 100%;
                         max-width: 100%;
                         letter-spacing: -0.32px;
+                        br {
+                            display: none;
+                        }
                     }
                 }
 
@@ -3040,7 +3044,7 @@ input.switch:checked+.custom-switch::before {
     overflow: hidden;
 
     @media(min-width: 1280px) {
-        padding: 128px 72px;
+        padding: 128px 72px 133px;
         max-width: 100%;
     }
 
@@ -3805,7 +3809,7 @@ input.switch:checked+.custom-switch::before {
             min-width: 576px;
             align-items: flex-start;
             flex: 1 0 0;
-            gap: 48px;
+            gap: 53px;
         }
 
         &--box {
@@ -3848,8 +3852,8 @@ input.switch:checked+.custom-switch::before {
 
                 button {
                     position: absolute;
-                    bottom: 24px;
-                    left: 24px;
+                    bottom: 16px;
+                    left: 18px;
                     display: flex;
                     height: 56px;
                     padding: 8px 24px;
@@ -3911,12 +3915,18 @@ input.switch:checked+.custom-switch::before {
                 width: 100%;
                 height: 100%;
                 border-radius: 12px;
-
+                @media(min-width: 1280px) {
+                    border-radius: 20px;
+                }
                 img {
                     border-radius: 12px;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    @media(min-width: 1280px) {
+                        border-radius: 20px;
+                        height: 410px;
+                    }
                 }
             }
 
@@ -3930,6 +3940,7 @@ input.switch:checked+.custom-switch::before {
 
                 @media(min-width: 1280px) {
                     padding: 8px;
+                    border-radius: 20px;
                 }
             }
         }
@@ -4062,7 +4073,8 @@ input.switch:checked+.custom-switch::before {
 
     .sub-menu__left--title {
         @media(min-width: 1280px) {
-            margin-bottom: 43px;
+            margin-bottom: 47px;
+            gap: 33px;
         }
     }
 
@@ -4164,7 +4176,7 @@ input.switch:checked+.custom-switch::before {
 
         @media(min-width: 1280px) {
             gap: 48px;
-            padding: 52px 8px 8px 8px;
+            padding: 49px 8px 8px 8px;
             height: 100%;
         }
     }
@@ -4627,8 +4639,9 @@ input.switch:checked+.custom-switch::before {
 
             @media(min-width: 1280px) {
                 border-radius: 20px;
-                height: 100%;
-                display: block;
+                display: flex;
+                height: auto;
+                align-self: stretch;
             }
 
             img {
@@ -5409,7 +5422,7 @@ input.switch:checked+.custom-switch::before {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-
+            flex: 1 0 0;
             @media(min-width: 1280px) {
                 display: flex;
                 max-width: 876px;
@@ -5509,7 +5522,7 @@ input.switch:checked+.custom-switch::before {
                     gap: 8px 24px;
                     flex-wrap: wrap;
                     padding: 0;
-
+                    justify-content: flex-start;
                     li {
                         padding: 4px 0px;
 

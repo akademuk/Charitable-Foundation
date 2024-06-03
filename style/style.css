@@ -492,7 +492,7 @@ input.switch:checked + .custom-switch::before {
 .header__donate button {
   border-radius: 99px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -2760,6 +2760,7 @@ input.switch:checked + .custom-switch::before {
     width: 406px;
     height: 493px;
     border-radius: 20px;
+    flex: 1 0 0;
   }
 }
 .arguments__main--card-img img {
@@ -2797,6 +2798,9 @@ input.switch:checked + .custom-switch::before {
     width: 100%;
     max-width: 100%;
     letter-spacing: -0.32px;
+  }
+  .arguments__main--card-content h3 br {
+    display: none;
   }
 }
 .arguments__main--card-content p {
@@ -2859,7 +2863,7 @@ input.switch:checked + .custom-switch::before {
 }
 @media (min-width: 1280px) {
   .directions {
-    padding: 128px 72px;
+    padding: 128px 72px 133px;
     max-width: 100%;
   }
 }
@@ -3573,7 +3577,7 @@ input.switch:checked + .custom-switch::before {
     min-width: 576px;
     align-items: flex-start;
     flex: 1 0 0;
-    gap: 48px;
+    gap: 53px;
   }
 }
 .team__right--box {
@@ -3618,8 +3622,8 @@ input.switch:checked + .custom-switch::before {
 }
 .team__right--box--row button {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
+  bottom: 16px;
+  left: 18px;
   display: flex;
   height: 56px;
   padding: 8px 24px;
@@ -3673,12 +3677,23 @@ input.switch:checked + .custom-switch::before {
   height: 100%;
   border-radius: 12px;
 }
+@media (min-width: 1280px) {
+  .team__right--box--img {
+    border-radius: 20px;
+  }
+}
 .team__right--box--img img {
   border-radius: 12px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 1280px) {
+  .team__right--box--img img {
+    border-radius: 20px;
+    height: 410px;
+  }
 }
 .team__right--box--con {
   border-radius: 12px;
@@ -3691,6 +3706,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .team__right--box--con {
     padding: 8px;
+    border-radius: 20px;
   }
 }
 .team__right--content {
@@ -3817,7 +3833,8 @@ input.switch:checked + .custom-switch::before {
 }
 @media (min-width: 1280px) {
   .help .sub-menu__left--title {
-    margin-bottom: 43px;
+    margin-bottom: 47px;
+    gap: 33px;
   }
 }
 @media (min-width: 1280px) {
@@ -3911,7 +3928,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .help .make-donation__right--box {
     gap: 48px;
-    padding: 52px 8px 8px 8px;
+    padding: 49px 8px 8px 8px;
     height: 100%;
   }
 }
@@ -4348,8 +4365,9 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .cta__box--left {
     border-radius: 20px;
-    height: 100%;
-    display: block;
+    display: flex;
+    height: auto;
+    align-self: stretch;
   }
 }
 .cta__box--left img {
@@ -5068,6 +5086,7 @@ input.switch:checked + .custom-switch::before {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1 0 0;
 }
 @media (min-width: 1280px) {
   .footer__box--right {
@@ -5164,6 +5183,7 @@ input.switch:checked + .custom-switch::before {
   gap: 8px 24px;
   flex-wrap: wrap;
   padding: 0;
+  justify-content: flex-start;
 }
 .footer__box--right nav .header__list li {
   padding: 4px 0px;

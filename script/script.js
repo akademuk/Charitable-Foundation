@@ -312,25 +312,27 @@ document.addEventListener('DOMContentLoaded', function () {
 // Swiper slider в блоке Напрямки
 document.addEventListener('DOMContentLoaded', function () {
     const swiperElements = document.querySelectorAll('.accordion__content--slider1');
-    
-    swiperElements.forEach(function(swiperElement, index) {
-        new Swiper(swiperElement, {
-            slidesPerView: 'auto',
-            spaceBetween: 17,
-            pagination: {
-                el: swiperElement.querySelector(`.accordion-pagination${index + 1}`),
-                clickable: true,
-            },
-            navigation: {
-                nextEl: swiperElement.querySelector(`.accordion-next${index + 1}`),
-                prevEl: swiperElement.querySelector(`.accordion-prev${index + 1}`),
-            },
-            breakpoints: {
-                1280: {
-                    spaceBetween: 22,
+
+    swiperElements.forEach((swiperElement) => {
+        if (swiperElement) {
+            const swiper = new Swiper(swiperElement, {
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                pagination: {
+                    el: swiperElement.querySelector('.accordion-pagination'),
+                    clickable: true,
                 },
-            }
-        });
+                navigation: {
+                    nextEl: swiperElement.querySelector('.accordion-next'),
+                    prevEl: swiperElement.querySelector('.accordion-prev'),
+                },
+                breakpoints: {
+                    1280: {
+                        spaceBetween: 22,
+                    },
+                }
+            });
+        }
     });
 });
 
@@ -376,6 +378,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     nextEl: swiperElement.querySelector('.accordion-next'),
                     prevEl: swiperElement.querySelector('.accordion-prev'),
                 },
+                breakpoints: {
+                    1280: {
+                        spaceBetween: 22,
+                    },
+                }
             });
         }
     });
@@ -632,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const newsSliderItems = document.querySelectorAll('.news__slider--item');
 
     function checkAndRemoveItems() {
-        if (window.innerWidth > 1280) {
+        if (window.innerWidth >= 1280) {
             let totalWidth = 0;
             newsSliderItems.forEach(item => {
                 item.style.display = ''; // Сбросить видимость элементов
