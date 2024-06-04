@@ -1729,6 +1729,11 @@ input.switch:checked + .custom-switch::before {
   overflow: hidden;
   width: 100%;
 }
+@media (min-width: 1280px) {
+  .make-donation__right--center {
+    border-radius: 16px;
+  }
+}
 .make-donation__nav {
   display: flex;
   flex-direction: column;
@@ -1792,6 +1797,22 @@ input.switch:checked + .custom-switch::before {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+@media (min-width: 1280px) {
+  .sub-menu__left--form--col2 {
+    gap: 0 !important;
+  }
+}
+@media (min-width: 1280px) {
+  .sub-menu__left--form--col2 > label {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 1280px) {
+  .sub-menu__left--form--col2 .sub-menu__radio {
+    margin: 24px 0 10px 0;
+  }
 }
 
 .burger-menu__overlay {
@@ -3662,6 +3683,11 @@ input.switch:checked + .custom-switch::before {
   z-index: -1;
   transition: all 0.4s ease;
 }
+@media (min-width: 1280px) {
+  .team__left::before, .team__left::after {
+    border-radius: 24px;
+  }
+}
 .team__left::before {
   background: transparent;
 }
@@ -3687,6 +3713,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .team__left--box {
     padding: 8px;
+    border-radius: 24px;
   }
 }
 .team__left--box--img {
@@ -3801,6 +3828,7 @@ input.switch:checked + .custom-switch::before {
     align-items: flex-start;
     gap: 8px;
     flex: 1 0 0;
+    border-radius: 24px;
   }
 }
 .team__right--box--row button {
@@ -3845,6 +3873,11 @@ input.switch:checked + .custom-switch::before {
   z-index: -1;
   transition: all 0.4s ease;
 }
+@media (min-width: 1280px) {
+  .team__right--box--row::before, .team__right--box--row::after {
+    border-radius: 24px;
+  }
+}
 .team__right--box--row::before {
   background: transparent;
 }
@@ -3875,7 +3908,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .team__right--box--img img {
     border-radius: 20px;
-    height: 410px;
+    height: 100%;
   }
 }
 .team__right--box--con {
@@ -3885,11 +3918,21 @@ input.switch:checked + .custom-switch::before {
   height: 100%;
   padding: 4px;
   width: 100%;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  height: 100%;
+  flex: 1 0 0;
+  border-radius: 12px;
+  background: var(--white-100);
+  position: relative;
 }
 @media (min-width: 1280px) {
   .team__right--box--con {
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 24px;
   }
 }
 .team__right--content {
@@ -3988,6 +4031,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .help .wrapper {
     max-width: 1776px;
+    border-radius: 24px;
   }
 }
 @media (min-width: 1921px) {

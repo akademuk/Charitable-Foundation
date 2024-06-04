@@ -1817,6 +1817,9 @@ input.switch:checked+.custom-switch::before {
             display: flex;
             overflow: hidden;
             width: 100%;
+            @media(min-width: 1280px) {
+                border-radius: 16px;
+            }
         }
     }
 
@@ -1898,6 +1901,21 @@ input.switch:checked+.custom-switch::before {
     }
 }
 
+.sub-menu__left--form--col2 {
+    @media(min-width:1280px) {
+        gap: 0 !important;
+    }
+    > label {
+        @media(min-width:1280px) {
+            margin-bottom: 8px;
+        }
+    }
+    .sub-menu__radio {
+        @media(min-width:1280px) {
+            margin: 24px 0 10px 0; 
+        } 
+    }
+}
 .burger-menu {
     &__overlay {
         position: fixed;
@@ -3913,6 +3931,9 @@ input.switch:checked+.custom-switch::before {
             inset: -3px;
             z-index: -1;
             transition: all 0.4s ease;
+            @media(min-width: 1280px)  {
+                border-radius: 24px;
+            }
         }
 
         &::before {
@@ -3943,6 +3964,7 @@ input.switch:checked+.custom-switch::before {
 
             @media(min-width: 1280px) {
                 padding: 8px;
+                border-radius: 24px;
             }
 
             &--img {
@@ -4058,6 +4080,7 @@ input.switch:checked+.custom-switch::before {
                     align-items: flex-start;
                     gap: 8px;
                     flex: 1 0 0;
+                    border-radius: 24px;
                 }
 
                 button {
@@ -4105,6 +4128,9 @@ input.switch:checked+.custom-switch::before {
                     inset: -3px;
                     z-index: -1;
                     transition: all 0.4s ease;
+                    @media(min-width: 1280px) {
+                        border-radius: 24px;
+                    }
                 }
 
                 &::before {
@@ -4138,7 +4164,7 @@ input.switch:checked+.custom-switch::before {
 
                     @media(min-width: 1280px) {
                         border-radius: 20px;
-                        height: 410px;
+                        height: 100%;
                     }
                 }
             }
@@ -4150,10 +4176,19 @@ input.switch:checked+.custom-switch::before {
                 height: 100%;
                 padding: 4px;
                 width: 100%;
-
+                display: flex;
+                padding: 5px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                height: 100%;
+                flex: 1 0 0;
+                border-radius: 12px;
+                background: var(--white-100);
+                position: relative;
                 @media(min-width: 1280px) {
                     padding: 8px;
-                    border-radius: 20px;
+                    border-radius: 24px;
                 }
             }
         }
@@ -4255,6 +4290,7 @@ input.switch:checked+.custom-switch::before {
 
         @media(min-width: 1280px) {
             max-width: 1776px;
+            border-radius: 24px;
         }
 
         @media(min-width: 1921px) {
