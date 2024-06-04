@@ -407,38 +407,45 @@ document.addEventListener('DOMContentLoaded', function () {
 // Swiper slider в блоке Новости на мобильном
 document.addEventListener('DOMContentLoaded', function () {
     const newsElement = document.querySelector('.news__slider');
+    const nextEl = document.querySelector('.news__slider--next');
+    const prevEl = document.querySelector('.news__slider--prev');
+    const paginationEl = document.querySelector('.news__slider--pagination');
 
     if (newsElement) {
-        const news = new Swiper(newsElement, {
-            slidesPerView: 'auto',
-            spaceBetween: 16,
-            pagination: {
-                el: '.news__slider--pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.news__slider--next',
-                prevEl: '.news__slider--prev',
-            },
-            breakpoints: {
-                1280: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    pagination: false,
-                    navigation: false,
-                    simulateTouch: false,
+        let news;
+
+        function initSlider() {
+            news = new Swiper(newsElement, {
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                pagination: {
+                    el: paginationEl,
+                    clickable: true,
                 },
-            },
-        });
+                navigation: {
+                    nextEl: nextEl,
+                    prevEl: prevEl,
+                },
+                breakpoints: {
+                    1280: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        pagination: false,
+                        navigation: false,
+                        simulateTouch: false,
+                    },
+                },
+            });
+        }
 
         function checkSlider() {
             if (window.innerWidth > 1280) {
-                if (news.initialized) {
+                if (news && news.initialized) {
                     news.destroy(true, true);
                 }
             } else {
-                if (!news.initialized) {
-                    news.init();
+                if (!news || !news.initialized) {
+                    initSlider();
                 }
             }
         }
@@ -448,6 +455,7 @@ document.addEventListener('DOMContentLoaded', function () {
         checkSlider();
     }
 });
+
 
 // Аккардион в блоке Напрямки
 document.addEventListener('DOMContentLoaded', function () {

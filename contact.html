@@ -264,7 +264,7 @@
                                 здійснення платежу від банку «Монобаню»
                             </p>
                             <button type="submit" id="submitBtn" class="button--blue">
-                                приєднатися<span class="icon-Namesend"></span>
+                                підтримати<span class="icon-Namesend"></span>
                             </button>
                         </div>
                     </form>
@@ -396,7 +396,7 @@
                     </form>
                     <div class="sub-menu__group sub-menu__needHelp">
                         <button type="submit" class="button--blue">
-                            приєднатися<span class="icon-Namesend"></span>
+                            надіслати запит<span class="icon-Namesend"></span>
                         </button>
                     </div>
                 </div>
@@ -408,15 +408,14 @@
                                 <li>
                                     <a href="#">
                                         <span class="icon-Namehome"></span>
-                                        вул. Василя Касіяна 2/1, Голосіївський район, Теремки,
-                                        Київ, 03006, Україна
+                                        м. Київ, вул. Воздвиженська, 18, 04071, Україна
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="#">
                                         <span class="icon-Namemail"></span>
-                                        nadezhda.kievich@example.com
+                                        rescuedfuture@gmail.com
                                     </a>
                                 </li>
 
@@ -522,9 +521,9 @@
         <div class="wrapper">
             <div class="header__container">
                 <div class="header__logo">
-                    <a href="#">
+                    <a href="index.html">
                         <img src="image/logo--blue.svg" alt="Врятоване майбутнє" class="logo__image" />
-                    </a>
+                      </a>
                 </div>
                 <nav class="header__nav nav">
                     <ul class="header__list">
@@ -585,8 +584,127 @@
         </div>
     </header>
 
-    <main>
-        <h1>Contact</h1>
+    <main class="main-all">
+        <div class="main-all__banner main-all__banner-bg">
+            <div class="wrapper">
+                <div class="breadcrumbs">
+                    <a href="index.html" class="link--black">головна<span class="icon-NameChevron-Right"></span></a>
+                    <span class="breadcrumbs__text">Контакти</span>
+                </div>
+                <div class="main-all__banner-tittle">
+                    <h1>зв'язок з нами</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Вам потрібна допомога? -->
+        <section class="help contact-all">
+            <div class="wrapper">
+                <div class="sub-menu__box">
+                    <div class="sub-menu__left needHelp__left">
+                        <div class="sub-menu__left--title">
+                            <h2>Вам потрібна допомога?</h2>
+                            <p>
+                                Якщо ви або ваші діти перебуваєте на окупованих територіях і у
+                                вас немає можливості встановити зв'язок з близькими, будь ласка,
+                                залиште свої контактні дані та короткий опис ситуації, і ми
+                                оперативно з вами зв'яжемося.
+                            </p>
+                        </div>
+                        <form class="sub-menu__left--form">
+                            <div class="sub-menu__left--form--col">
+                                <div class="sub-menu__group">
+                                    <label class="sub-menu__label" for="name">Ваше ім'я</label>
+                                    <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                                </div>
+                                <div class="sub-menu__group">
+                                    <label class="sub-menu__label" for="phone">Телефон</label>
+                                    <input class="sub-menu__input" type="tel" id="phone"
+                                        placeholder="+38 (0XX)  XXX  XX  XX" />
+                                </div>
+                                <div class="sub-menu__group">
+                                    <label class="sub-menu__label" for="email">Email</label>
+                                    <input class="sub-menu__input" type="email" id="email"
+                                        placeholder="name@gmail.com" />
+                                </div>
+                            </div>
+                            <div class="sub-menu__left--form--col sub-menu__left--form--col2">
+                                <label for="textarea">Текст повідомлення</label>
+                                <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут"></textarea>
+                                <div class="sub-menu__radio">
+                                    <div class="control-group">
+                                        <label>
+                                            <input type="radio" name="radio" checked />
+                                            <span class="custom-radio"></span>
+                                            <p>Питання</p>
+                                        </label>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>
+                                            <input type="radio" name="radio" />
+                                            <span class="custom-radio"></span>
+                                            <p>Проблема</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="sub-menu__group sub-menu__needHelp">
+                            <button type="submit" class="button--blue">відправити<span class="icon-Namesend"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sub-menu__right make-donation__right makeDonation__right">
+                        <div class="make-donation__right--box">
+                            <div class="make-donation__right--top">
+                                <h3>Адреса</h3>
+                                <ul class="make-donation__nav">
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-Namehome"></span>
+                                            вул. Василя Касіяна 2/1, Голосіївський район, Теремки,
+                                            Київ, 03006, Україна
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-Namemail"></span>
+                                            nadezhda.kievich@example.com
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon-Namecall"></span>
+                                            +38 093 108 06 87
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="make-donation__social">
+                                    <li class="icon-Nameshare"></li>
+                                    <li>
+                                        <a href="#" class="link--black">facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link--black">instagram</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link--black">telegram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="make-donation__right--center">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.293856134085!2d30.45970557684722!3d50.37972039245361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8fcaff2a83d%3A0x4d6350338f1890ad!2z0LLRg9C70LjRhtGPINCS0LDRgdC40LvRjyDQmtCw0YHRltGP0L3QsCwgMi8xLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1716812111111!5m2!1suk!2sua"
+                                    width="706" height="396" style="border: 0" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
