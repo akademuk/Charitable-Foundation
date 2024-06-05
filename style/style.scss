@@ -4930,6 +4930,7 @@ input.switch:checked+.custom-switch::before {
                 display: flex;
                 height: auto;
                 align-self: stretch;
+                flex: 1;
             }
 
             img {
