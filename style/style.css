@@ -823,6 +823,7 @@ input.switch:checked + .custom-switch::before {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   padding: 48px 32px 48px 32px;
 }
 @media (min-width: 1280px) {
@@ -3911,6 +3912,7 @@ input.switch:checked + .custom-switch::before {
 .team__right--box picture {
   height: 100%;
   width: 100%;
+  display: block;
 }
 .team__right--box--img {
   width: 100%;
