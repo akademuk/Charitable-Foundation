@@ -320,7 +320,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: swiperElement.querySelector('.gallery-next'),
                 prevEl: swiperElement.querySelector('.gallery-prev'),
             },
-            loop: true,
         });
     });
 });
