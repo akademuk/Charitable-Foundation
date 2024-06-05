@@ -693,20 +693,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Loader
-function loadData() {
-    return new Promise((resolve, reject) => {
-      // setTimeout не является частью решения
-      // Код ниже должен быть заменен на логику подходящую для решения вашей задачи
-      setTimeout(resolve, 2000);
-    })
-  }
-  
-  loadData()
-    .then(() => {
-      let preloaderEl = document.getElementById('loader');
-      preloaderEl.classList.add('hidden');
-      preloaderEl.classList.remove('visible');
-    });
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('no-scroll');
+});
+
+window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+    document.body.classList.remove('no-scroll');
+});
+
 // Плавный скрол к якорю
 jQuery(document).ready(function ($) {
 	// Плавный переход к якорю для ссылок на той же странице

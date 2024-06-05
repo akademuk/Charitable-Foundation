@@ -4073,6 +4073,7 @@ input.switch:checked+.custom-switch::before {
                 min-width: 576px;
                 flex-direction: row;
                 gap: 24px;
+                flex-wrap: wrap;
             }
 
             &--row {
@@ -4174,6 +4175,7 @@ input.switch:checked+.custom-switch::before {
 
                 @media(min-width: 1280px) {
                     border-radius: 20px;
+                    height: 100%;
                 }
 
                 img {
