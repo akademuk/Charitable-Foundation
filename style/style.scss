@@ -4163,7 +4163,10 @@ input.switch:checked+.custom-switch::before {
                     opacity: 1;
                 }
             }
-
+            picture{ 
+                height: 100%;
+                width: 100%;
+            }
             &--img {
                 width: 100%;
                 height: 100%;
