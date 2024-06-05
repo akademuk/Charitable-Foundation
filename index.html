@@ -19,7 +19,7 @@
   <!-- Loader -->
   <div id="loader" class="loader">
     <span class="loader2"></span>
-    <img src="image/logo-text.svg" alt="">
+    <img width="96" height="34" src="image/logo-text.svg" alt="Врятоване майбутнє">
   </div>
 
   <!-- Фон при открытии меню-->
@@ -27,49 +27,64 @@
 
   <!-- Выпадающий список с помощью-->
   <div class="card-menu__overlay" id="cardMenuOverlay">
-    <button class="close-btn button--yellow">
+    <button class="close-btn button--yellow" aria-label="Закрыть меню">
       <span class="icon-Nameclose"></span>
     </button>
     <div class="card-menu__wrapper">
       <div class="card-menu">
-        <h2>допомога</h2>
+        <h2>Допомога</h2>
         <div class="menu__overlay">
           <div class="menu__overlay--card" data-card="card1">
             <div class="menu__overlay--content">
-              <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png" alt="Emodji" /></span>
+              <span class="menu__overlay--content-Emodji1">
+                <picture>
+                  <source srcset="image/Emodji.webp" type="image/webp">
+                  <img width="40" height="40" src="image/Emodji.png" alt="Emodji" loading="lazy">
+                </picture>
+              </span>
               <h3>Стати нашим партнером</h3>
               <p>Приєднатися до партнерської програми</p>
             </div>
-            <a href="#" class="menu__overlay--link link--black">почати<span class="icon-NameChevron-Right"></span></a>
+            <a href="#" class="menu__overlay--link link--black">Почати<span class="icon-NameChevron-Right"></span></a>
           </div>
 
           <div class="menu__overlay--card" data-card="card2">
             <div class="menu__overlay--content">
-              <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png" alt="Emodji" /></span>
+              <span class="menu__overlay--content-Emodji2">
+                <picture>
+                  <source srcset="image/Emodji2.webp" type="image/webp">
+                  <img width="40" height="40" src="image/Emodji2.png" alt="Emodji" loading="lazy">
+                </picture>
+              </span>
               <h3>Зробити донат</h3>
               <p>
                 Допоможіть дітям, які постраждали від війни. Ваш вклад рятує
                 життя!
               </p>
               <div class="menu__overlay--btn">
-                <button>монобанка</button>
+                <button>Монобанка</button>
                 <span>або</span>
-                <button>за реквізитами</button>
+                <button>За реквізитами</button>
               </div>
             </div>
-            <a href="#" class="menu__overlay--link link--black">почати<span class="icon-NameChevron-Right"></span></a>
+            <a href="#" class="menu__overlay--link link--black">Почати<span class="icon-NameChevron-Right"></span></a>
           </div>
 
           <div class="menu__overlay--card" data-card="card3">
             <div class="menu__overlay--content">
-              <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png" alt="Emodji" /></span>
+              <span class="menu__overlay--content-Emodji3">
+                <picture>
+                  <source srcset="image/Emodji3.webp" type="image/webp">
+                  <img width="40" height="40" src="image/Emodji3.png" alt="Emodji" loading="lazy">
+                </picture>
+              </span>
               <h3>Вам потрібна допомога?</h3>
               <p>
                 Зв'яжіться з нами, якщо ви або ваші діти перебуваєте на
                 окупованій території
               </p>
             </div>
-            <a href="#" class="menu__overlay--link link--black">почати<span class="icon-NameChevron-Right"></span></a>
+            <a href="#" class="menu__overlay--link link--black">Почати<span class="icon-NameChevron-Right"></span></a>
           </div>
         </div>
       </div>
@@ -81,15 +96,16 @@
 
   <!-- Выпадающий список с помощью "Стати нашим партнером"-->
   <div class="sub-menu__overlay" id="becomeOurPartner">
-    <button class="close-btn button--yellow">
+    <button class="close-btn button--yellow" aria-label="Закрыть меню">
       <span class="icon-Nameclose"></span>
     </button>
     <div class="sub-menu">
       <div class="sub-menu__box">
         <div class="sub-menu__left">
           <div class="sub-menu__left--logo">
-            <a href="#">
-              <img src="image/logo--mobile.svg" alt="Врятоване майбутнє" class="logo__image" />
+            <a href="index.html">
+              <img width="124" height="42" src="image/logo--mobile.svg" alt="Врятоване майбутнє" class="logo__image"
+                loading="lazy">
             </a>
           </div>
           <div class="sub-menu__left--title">
@@ -103,15 +119,16 @@
           <form action="" class="sub-menu__left--form">
             <div class="sub-menu__group">
               <label class="sub-menu__label" for="name">Ваше ім'я</label>
-              <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+              <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" required>
             </div>
             <div class="sub-menu__group">
               <label class="sub-menu__label" for="phone">Телефон</label>
-              <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX)  XXX  XX  XX" />
+              <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX) XXX XX XX"
+                pattern="\+38 \(0\d{2}\) \d{3} \d{2} \d{2}" required>
             </div>
             <div class="sub-menu__group">
               <label class="sub-menu__label" for="email">Email</label>
-              <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+              <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" required>
             </div>
             <div class="sub-menu__group">
               <button type="submit" class="button--blue">
@@ -124,44 +141,38 @@
             <div class="sub-menu__slider swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
                 <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="image/Logos.svg" alt="" />
+                  <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="sub-menu__right">
-          <img src="image/becomeOurPartner.png" alt="" />
+          <picture>
+            <source srcset="image/becomeOurPartner.webp" type="image/webp">
+            <img width="1444" height="1430" src="image/becomeOurPartner.png" alt="Партнерство" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>
@@ -172,7 +183,7 @@
 
   <!-- Выпадающий список с помощью "Зробити донат до фонду"-->
   <div class="sub-menu__overlay make-donation__overlay" id="makeDonation">
-    <button class="close-btn button--yellow">
+    <button class="close-btn button--yellow" aria-label="Закрыть меню">
       <span class="icon-Nameclose"></span>
     </button>
     <div class="sub-menu make-donation">
@@ -180,12 +191,13 @@
         <div class="sub-menu__left make-donation__left">
           <div class="sub-menu__left--logo">
             <a href="index.html">
-              <img src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє" class="logo__image" />
+              <img width="124" height="42" src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє"
+                class="logo__image" loading="lazy">
             </a>
           </div>
           <div class="sub-menu__left--title">
             <h2>
-              Зробити донат <br />
+              Зробити донат <br>
               до фонду
             </h2>
             <p>
@@ -200,7 +212,7 @@
             <div class="make-donation__value">
               <label for="value">Сума</label>
               <div>
-                <input type="number" id="value" name="amount" value="0" />
+                <input type="number" id="value" name="amount" value="0" required>
                 <select id="currency" name="currency" class="currency-selector">
                   <option value="UAH">UAH</option>
                   <option value="USD">USD</option>
@@ -255,7 +267,7 @@
             <div class="make-donation__submit">
               <p>
                 Далі Ви будете спрямовані на сторінку введення даних для
-                здійснення платежу від банку «Монобаню»
+                здійснення платежу від банку «Монобанк»
               </p>
               <button type="submit" id="submitBtn" class="button--blue">
                 підтримати<span class="icon-Namesend"></span>
@@ -331,7 +343,7 @@
 
   <!-- Выпадающий список с помощью "Вам потрібна допомога?"-->
   <div class="sub-menu__overlay" id="needHelp">
-    <button class="close-btn button--yellow">
+    <button class="close-btn button--yellow" aria-label="Закрыть меню">
       <span class="icon-Nameclose"></span>
     </button>
     <div class="sub-menu">
@@ -339,7 +351,8 @@
         <div class="sub-menu__left needHelp__left">
           <div class="sub-menu__left--logo">
             <a href="index.html">
-              <img src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє" class="logo__image" />
+              <img width="124" height="42" src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє"
+                class="logo__image" loading="lazy">
             </a>
           </div>
           <div class="sub-menu__left--title">
@@ -355,31 +368,32 @@
             <div class="sub-menu__left--form--col">
               <div class="sub-menu__group">
                 <label class="sub-menu__label" for="name">Ваше ім'я</label>
-                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" required>
               </div>
               <div class="sub-menu__group">
                 <label class="sub-menu__label" for="phone">Телефон</label>
-                <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX)  XXX  XX  XX" />
+                <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX) XXX XX XX"
+                  pattern="\+38 \(0\d{2}\) \d{3} \d{2} \d{2}" required>
               </div>
               <div class="sub-menu__group">
                 <label class="sub-menu__label" for="email">Email</label>
-                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" required>
               </div>
             </div>
             <div class="sub-menu__left--form--col">
               <label for="textarea">Текст повідомлення</label>
-              <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут"></textarea>
+              <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут" required></textarea>
               <div class="sub-menu__radio">
                 <div class="control-group">
                   <label>
-                    <input type="radio" name="radio" checked />
+                    <input type="radio" name="radio" value="question" checked>
                     <span class="custom-radio"></span>
                     <p>Питання</p>
                   </label>
                 </div>
                 <div class="control-group">
                   <label>
-                    <input type="radio" name="radio" />
+                    <input type="radio" name="radio" value="problem">
                     <span class="custom-radio"></span>
                     <p>Проблема</p>
                   </label>
@@ -404,16 +418,14 @@
                     м. Київ, вул. Воздвиженська, 18, 04071, Україна
                   </a>
                 </li>
-
                 <li>
-                  <a href="#">
+                  <a href="mailto:rescuedfuture@gmail.com">
                     <span class="icon-Namemail"></span>
                     rescuedfuture@gmail.com
                   </a>
                 </li>
-
                 <li>
-                  <a href="#">
+                  <a href="tel:+380931080687">
                     <span class="icon-Namecall"></span>
                     +38 093 108 06 87
                   </a>
@@ -451,10 +463,11 @@
   <div class="burger-menu__overlay" id="burgerMenuOverlay">
     <div class="burger-menu__scroll">
       <div class="burger-menu__headeer">
-        <a href="#">
-          <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+        <a href="index.html">
+          <img width="125" height="42" src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image"
+            loading="lazy">
         </a>
-        <button class="burger-menu__close button--yellow">
+        <button class="burger-menu__close button--yellow" aria-label="Закрыть меню">
           <span class="icon-Nameclose"></span>
         </button>
       </div>
@@ -514,38 +527,38 @@
       <div class="header__container">
         <div class="header__logo">
           <a href="index.html">
-            <img src="image/logo--blue.svg" alt="Врятоване майбутнє" class="logo__image" />
+            <img width="151" height="50" src="image/logo--blue.svg" alt="Врятоване майбутнє" class="logo__image">
           </a>
         </div>
         <nav class="header__nav nav">
           <ul class="header__list">
             <li class="header__item">
-              <a href="index.html" class="header__link link--black">головна</a>
+              <a href="index.html" class="header__link link--black">Головна</a>
             </li>
             <li class="header__item">
-              <a href="index.html#meta" class="header__link link--black">мета</a>
+              <a href="index.html#meta" class="header__link link--black">Мета</a>
             </li>
             <li class="header__item">
-              <a href="index.html#partner" class="header__link link--black">партнери</a>
+              <a href="index.html#partner" class="header__link link--black">Партнери</a>
             </li>
             <li class="header__item">
-              <a href="index.html#news" class="header__link link--black">новини</a>
+              <a href="index.html#news" class="header__link link--black">Новини</a>
             </li>
             <li class="header__item">
-              <a href="reports.html" class="header__link link--black">звіти</a>
+              <a href="reports.html" class="header__link link--black">Звіти</a>
             </li>
             <li class="header__item">
-              <a href="index.html#team" class="header__link link--black">команда</a>
+              <a href="index.html#team" class="header__link link--black">Команда</a>
             </li>
             <li class="header__item">
-              <a href="contact.html" class="header__link link--black">контакти</a>
+              <a href="contact.html" class="header__link link--black">Контакти</a>
             </li>
           </ul>
         </nav>
         <div class="header__info">
           <div class="header__hotline">
             <div class="header__dropdown">
-              <button class="header__dropdown--toggle">
+              <button class="header__dropdown--toggle" aria-label="Контактна інформація">
                 +38 093 108 06 87
               </button>
               <div class="header__dropdown--menu">
@@ -554,18 +567,18 @@
                 <a href="https://facebook.com/rescuedifuture" class="header__dropdown--item"
                   target="_blank"><span>Facebook</span>@rescuedfuture</a>
                 <a href="https://instagram.com/rescuedifuture" class="header__dropdown--item"
-                  target="_blank"><span>instagram</span>@rescuedfuture</a>
+                  target="_blank"><span>Instagram</span>@rescuedfuture</a>
               </div>
             </div>
           </div>
           <div class="header__donate">
             <button class="header__btn button--yellow">
-              допомогти <span class="icon-NamePlus"></span>
+              Допомогти <span class="icon-NamePlus"></span>
             </button>
           </div>
         </div>
         <div class="header__menu button--yellow" id="burgerMenu">
-          <span>меню</span>
+          <span>Меню</span>
           <div class="header__menu--icon" id="burgerMenuIcon">
             <span class="header__menu--icon-line"></span>
             <span class="header__menu--icon-line"></span>
@@ -581,10 +594,10 @@
     <div class="wrapper">
       <div class="hero__left">
         <div class="hero__left--title">
-          <h1>Рятуючи майбутнє,<span>змінюємо</span></h1>
+          <h1>Рятуючи майбутнє, <span>змінюємо</span> світ!</h1>
         </div>
         <div class="hero__left--button">
-          <a href="#">світ!</a>
+          <a href="#" class="hero__cta-link">світ!</a>
           <div class="video__animation">
             <video src="image/video-btn.mp4" autoplay muted loop></video>
           </div>
@@ -594,9 +607,18 @@
         <div class="hero__right--box">
           <div>
             <div class="hero__right--avatar">
-              <img src="image/avatar1.png" alt="avatar" />
-              <img src="image/avatar2.png" alt="avatar" />
-              <img src="image/avatar3.png" alt="avatar" />
+              <picture>
+                <source srcset="image/avatar1.webp" type="image/webp">
+                <img width="96" height="96" src="image/avatar1.png" alt="Аватар дитина 1">
+              </picture>
+              <picture>
+                <source srcset="image/avatar2.webp" type="image/webp">
+                <img width="96" height="96" src="image/avatar2.png" alt="Аватар дитина 2">
+              </picture>
+              <picture>
+                <source srcset="image/avatar3.webp" type="image/webp">
+                <img width="96" height="96" src="image/avatar3.png" alt="Аватар дитина 3">
+              </picture>
             </div>
             <div class="hero__right--content">
               <p>124+</p>
@@ -606,16 +628,16 @@
         </div>
         <div class="hero__right--content-text">
           <p>
-            Війна залишає глибокі рани не лише на землі, але й у серцях
+            Війна залишає глибокі рани не лише на землі, але й у серцях
             найвразливіших – дітей, які через війну втрачають батьків,
-            домівки, затишок та безпеку. На окупованих територіях тисячі дітей
-            опиняються в епіцентрі конфлікту, змушені жити без
-            опіки та підтримки рідних, які залишилися в інших місцях або,
-            на жаль, загинули. Все ускладнюється, коли окупанти насильно
-            вивозять цих дітей на територію росії,позбавляючи їх можливості
-            повернутися до родини, культури та мови.Депортація не лише є
-            грубим порушенням прав людини та міжнародногогуманітарного права,
-            але й завдає непоправної шкоди психічному та
+            домівки, затишок та безпеку. На окупованих територіях тисячі дітей
+            опиняються в епіцентрі конфлікту, змушені жити без
+            опіки та підтримки рідних, які залишилися в інших місцях або,
+            на жаль, загинули. Все ускладнюється, коли окупанти насильно
+            вивозять цих дітей на територію росії, позбавляючи їх можливості
+            повернутися до родини, культури та мови. Депортація не лише є
+            грубим порушенням прав людини та міжнародного гуманітарного права,
+            але й завдає непоправної шкоди психічному та емоційному здоров'ю дітей.
           </p>
           <a href="#" class="link--black"><span class="icon-NameArrow-down-right"></span>Читати далі</a>
         </div>
@@ -634,20 +656,29 @@
           <div class="swiper-slider gallery-slider gallery__box--left-main">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="image/gallery2.png" alt="Slide 1" />
+                <picture>
+                  <source srcset="image/gallery2.webp" type="image/webp">
+                  <img width="1200" height="900" src="image/gallery2.png" alt="Галерея 2" loading="lazy">
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img src="image/gallery3.png" alt="Slide 2" />
+                <picture>
+                  <source srcset="image/gallery3.webp" type="image/webp">
+                  <img width="1200" height="900" src="image/gallery3.png" alt="Галерея 3" loading="lazy">
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img src="image/gallery4.png" alt="Slide 3" />
+                <picture>
+                  <source srcset="image/gallery4.webp" type="image/webp">
+                  <img width="1200" height="900" src="image/gallery4.png" alt="Галерея 4" loading="lazy">
+                </picture>
               </div>
             </div>
             <div class="swiper-pagination gallery-pagination"></div>
-            <div class="swiper-button-next gallery-next">
+            <div class="swiper-button-next gallery-next" aria-label="Следующий слайд">
               <span class="icon-NameChevron-Right"></span>
             </div>
-            <div class="swiper-button-prev gallery-prev">
+            <div class="swiper-button-prev gallery-prev" aria-label="Предыдущий слайд">
               <span class="icon-NameChevron-Left"></span>
             </div>
           </div>
@@ -660,7 +691,8 @@
                     Допомога дітям, переміщеним на територію країни-агресора,
                     повернутися
                   </p>
-                  <button data-target="accordion-1" class="link--yellow"><span
+                  <button data-target="accordion-1" class="link--yellow"
+                    aria-label="Детальніше про повернення депортованих дітей"><span
                       class="icon-NameArrow-down-right"></span>Детальніше</button>
                 </div>
               </div>
@@ -668,30 +700,40 @@
             <div class="gallery__box--left-bottom-card2" data-target="accordion-2">
               <div class="gallery__box--left-bg">
                 <h3>Психологічна реабілітація дітей військовослужбовців</h3>
-                <button data-target="accordion-2" class="link--black"><span
+                <button data-target="accordion-2" class="link--black"
+                  aria-label="Детальніше про психологічну реабілітацію"><span
                     class="icon-NameArrow-down-right"></span>Детальніше</button>
               </div>
             </div>
           </div>
         </div>
         <div class="gallery__box--right">
-          <div class="swiper-slider gallery-slider gallery__box--left-main">
+          <div class="swiper-slider gallery-slider gallery__box--right-main">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="image/gallery2.png" alt="Slide 1" />
+                <picture>
+                  <source srcset="image/gallery2.webp" type="image/webp">
+                  <img width="1200" height="900" src="image/gallery2.png" alt="Галерея 2" loading="lazy">
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img src="image/gallery3.png" alt="Slide 2" />
+                <picture>
+                  <source srcset="image/gallery3.webp" type="image/webp">
+                  <img width="1200" height="900" src="image/gallery3.png" alt="Галерея 3" loading="lazy">
+                </picture>
               </div>
               <div class="swiper-slide">
-                <img src="image/gallery4.png" alt="Slide 3" />
+                <picture>
+                  <source srcset="image/gallery4.webp" type="image/webp">
+                  <img width="1200" height="900" src="image/gallery4.png" alt="Галерея 4" loading="lazy">
+                </picture>
               </div>
             </div>
             <div class="swiper-pagination gallery-pagination"></div>
-            <div class="swiper-button-next gallery-next">
+            <div class="swiper-button-next gallery-next" aria-label="Следующий слайд">
               <span class="icon-NameChevron-Right"></span>
             </div>
-            <div class="swiper-button-prev gallery-prev">
+            <div class="swiper-button-prev gallery-prev" aria-label="Предыдущий слайд">
               <span class="icon-NameChevron-Left"></span>
             </div>
           </div>
@@ -704,22 +746,22 @@
   <section class="arguments" id="meta">
     <div class="wrapper">
       <div class="arguments__top">
-        <h2>Вплив війни на дітей: глибинні рани серця та душі</h2>
+        <h2>Вплив війни на дітей: глибинні рани серця та душі</h2>
         <p>
-          Війна завдає глибоких ран не лише землі, але й серцям дітей, які
-          внаслідок конфлікту втрачають батьків, домівки, затишок та безпеку.
-          На окупованих територіях тисячі дітей опиняються в епіцентрі війни,
-          змушені жити без опіки та підтримки, залишаючись без рідних або,
-          на жаль, втрачаючи їх.
+          Війна завдає глибоких ран не лише землі, але й серцям дітей, які
+          внаслідок конфлікту втрачають батьків, домівки, затишок та безпеку.
+          На окупованих територіях тисячі дітей опиняються в епіцентрі війни,
+          змушені жити без опіки та підтримки, залишаючись без рідних або,
+          на жаль, втрачаючи їх.
         </p>
       </div>
       <div class="arguments__main">
         <div class="arguments__main--col">
           <div class="arguments__main--card">
             <div class="arguments__main--card-title">
-              <img src="image/error-icon.svg" alt="error" />
+              <img width="40" height="40" src="image/error-icon.svg" alt="Иконка ошибки" loading="lazy">
               <h3>
-                Насильницька депортація <br />
+                Насильницька депортація <br>
                 та її наслідки
               </h3>
             </div>
@@ -734,7 +776,7 @@
 
           <div class="arguments__main--card">
             <div class="arguments__main--card-title">
-              <img src="image/error-icon.svg" alt="error" />
+              <img width="40" height="40" src="image/error-icon.svg" alt="Иконка ошибки" loading="lazy">
               <h3>Травми та відчуження</h3>
             </div>
             <div class="arguments__main--card-text">
@@ -746,11 +788,14 @@
         </div>
         <div class="arguments__main--card">
           <div class="arguments__main--card-img">
-            <img src="image/arguments-img.png" alt="image" />
+            <picture>
+              <source srcset="image/arguments-img.webp" type="image/webp">
+              <img width="812" height="986" src="image/arguments-img.png" alt="Изображение галереи" loading="lazy">
+            </picture>
           </div>
           <div class="arguments__main--card-content">
             <h3>
-              Роль міжнародної <br />
+              Роль міжнародної <br>
               спільноти та благодійних організацій
             </h3>
             <div class="arguments__main--card-box">
@@ -777,13 +822,13 @@
   <section class="directions">
     <div class="wrapper">
       <h2>Напрямки</h2>
-      <div class="directions__accardion accordion">
+      <div class="directions__accordion accordion">
         <div class="accordion__item" id="accordion-1">
-          <button class="accordion__header active">
+          <button class="accordion__header active" aria-expanded="true">
             <p>1</p>
             Повернення депортованих росіянами дітей<span class="icon-NameArrow-up-right"></span>
           </button>
-          <div class="accordion__content accordion__content--active">
+          <div class="accordion__content accordion__content--active" aria-hidden="false">
             <div class="accordion__content--box">
               <div class="accordion__content--box-right accordion__content--slider1 swiper">
                 <div class="swiper-wrapper">
@@ -801,18 +846,18 @@
                       <h3 style="font-family: Affect">
                         Діяльність за напрямком:
                       </h3>
-                      <img src="image/arrow.gif" class="swiper__gif" alt="arrow" />
+                      <img src="image/arrow.gif" class="swiper__gif" alt="Анимация стрелки" loading="lazy" />
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="accordion__content--slide accordion__content--white">
                       <h3>Юридичний супровід:</h3>
                       <p>
-                        Забезпечення правової допомоги для вирішенняпитань,
+                        Забезпечення правової допомоги для вирішення питань,
                         пов'язаних з поверненням дітей, визнанням їх прав на
                         громадянство, оформленням документів, а також веденням
                         справ у міжнародних судових інстанціях за участю
-                        кваліфікованих міжнароднихюристів.
+                        кваліфікованих міжнародних юристів.
                       </p>
                     </div>
                   </div>
@@ -820,7 +865,7 @@
                     <div class="accordion__content--slide accordion__content--white">
                       <h3>Освіта:</h3>
                       <p>
-                        Тематичні майстерні та майстеркласи, програми
+                        Тематичні майстерні та майстер-класи, програми
                         профорієнтації для підлітків на базі освітніх курсів
                         та програм. Можливості для стажування, волонтерства та
                         активної участі дітей і підлітків у публічних заходах,
@@ -830,7 +875,10 @@
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
                     <div class="accordion__content--slide accordion__content--white accordion__content--img">
-                      <img src="image/accardion-img1.png" alt="" />
+                      <picture>
+                        <source srcset="image/accardion-img1.webp" type="image/webp">
+                        <img width="568" height="568" src="image/accardion-img1.png" alt="Галерея 1" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
@@ -846,7 +894,10 @@
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
                     <div class="accordion__content--slide accordion__content--white accordion__content--img">
-                      <img src="image/accardion-img3.png" alt="" />
+                      <picture>
+                        <source srcset="image/accardion-img3.webp" type="image/webp">
+                        <img width="480" height="480" src="image/accardion-img3.png" alt="Галерея 3" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
@@ -863,7 +914,10 @@
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
                     <div class="accordion__content--slide accordion__content--white accordion__content--img">
-                      <img src="image/accardion-img2.png" alt="" />
+                      <picture>
+                        <source srcset="image/accardion-img2.webp" type="image/webp">
+                        <img width="568" height="568" src="image/accardion-img2.png" alt="Галерея 2" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
@@ -872,14 +926,17 @@
                       <p>
                         Створення умов для дітей в умовах війни з метою
                         задоволення базових потреб. Проєкти
-                        психосоціальноїпідтримки дітей і підлітків, соціальної
+                        психосоціальної підтримки дітей і підлітків, соціальної
                         підтримки сімей.
                       </p>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
                     <div class="accordion__content--slide accordion__content--white accordion__content--img">
-                      <img src="image/accardion-img4.png" alt="" />
+                      <picture>
+                        <source srcset="image/accardion-img4.webp" type="image/webp">
+                        <img width="480" height="480" src="image/accardion-img4.png" alt="Галерея 4" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
@@ -909,7 +966,7 @@
                         <div class="accordion__content--slide-text">
                           <h4>Освіта:</h4>
                           <p>
-                            Тематичні майстерні та майстеркласи, програми
+                            Тематичні майстерні та майстер-класи, програми
                             профорієнтації для підлітків на базі освітніх
                             курсів та програм. Можливості для стажування,
                             волонтерства та активної участі дітей і підлітків
@@ -918,19 +975,27 @@
                           </p>
                         </div>
                         <div class="accordion__content--slide-img">
-                          <img src="image/accardion-img1.png" alt="" />
+                          <picture>
+                            <source srcset="image/accardion-img1.webp" type="image/webp">
+                            <img width="568" height="568" src="image/accardion-img1.png" alt="Галерея 1"
+                              loading="lazy" />
+                          </picture>
                         </div>
                       </div>
                       <div class="accordion__content--slide-bottom">
                         <div class="accordion__content--slide-img">
-                          <img src="image/accardion-img2.png" alt="" />
+                          <picture>
+                            <source srcset="image/accardion-img2.webp" type="image/webp">
+                            <img width="568" height="568" src="image/accardion-img2.png" alt="Галерея 2"
+                              loading="lazy" />
+                          </picture>
                         </div>
                         <div class="accordion__content--slide-text">
                           <h4>Соціальна адаптація (соціалізація):</h4>
                           <p>
                             Створення умов для дітей в умовах війни з метою
                             задоволення базових потреб. Проєкти
-                            психосоціальноїпідтримки дітей і підлітків,
+                            психосоціальної підтримки дітей і підлітків,
                             соціальної підтримки сімей.
                           </p>
                         </div>
@@ -945,18 +1010,26 @@
                           <p>
                             Організація медичного обстеження і лікування
                             дітей, які потребують допомоги через пережиті
-                            травми, хвороби абофізичні ушкодження, отримані
+                            травми, хвороби або фізичні ушкодження, отримані
                             під час перебування в депортації або в зоні
                             бойових дій.
                           </p>
                         </div>
                         <div class="accordion__content--slide-img">
-                          <img src="image/accardion-img3.png" alt="" />
+                          <picture>
+                            <source srcset="image/accardion-img3.webp" type="image/webp">
+                            <img width="480" height="480" src="image/accardion-img3.png" alt="Галерея 3"
+                              loading="lazy" />
+                          </picture>
                         </div>
                       </div>
                       <div class="accordion__content--slide-bottom">
                         <div class="accordion__content--slide-img">
-                          <img src="image/accardion-img4.png" alt="" />
+                          <picture>
+                            <source srcset="image/accardion-img4.webp" type="image/webp">
+                            <img width="480" height="480" src="image/accardion-img4.png" alt="Галерея 4"
+                              loading="lazy" />
+                          </picture>
                         </div>
                         <div class="accordion__content--slide-text">
                           <h4>Житло та опіка:</h4>
@@ -989,7 +1062,11 @@
                       <div class="accordion__content--slide-bottom accordion__content--slide-bottom--black">
                         <div class="accordion__content--slide-text swiper-slide--open">
                           <div class="accordion__content--slide-text-img">
-                            <img src="image/accardion-img7.png" alt="" />
+                            <picture>
+                              <source srcset="image/accardion-img7.webp" type="image/webp">
+                              <img width="560" height="568" src="image/accardion-img7.png" alt="Галерея 7"
+                                loading="lazy" />
+                            </picture>
                           </div>
                           <div class="accordion__content--slide-text-tx">
                             <h4>Приєднатися до нас</h4>
@@ -1015,11 +1092,11 @@
           </div>
         </div>
         <div class="accordion__item" id="accordion-2">
-          <button class="accordion__header">
+          <button class="accordion__header" aria-expanded="false">
             <p>2</p>
             Психологічна реабілітація дітей військовослужбовців<span class="icon-NameArrow-up-right"></span>
           </button>
-          <div class="accordion__content">
+          <div class="accordion__content" aria-hidden="true">
             <div class="accordion__content--box">
               <div class="accordion__content--box-right accordion__content--slider2 swiper">
                 <div class="swiper-wrapper">
@@ -1028,22 +1105,28 @@
                       <p>
                         Фонд приділяє особливу увагу психологічній
                         реабілітації дітей, чиї батьки наразі служать або
-                        загинули в російсько-українській війні
+                        загинули в російсько-українській війні.
                       </p>
                       <h3 style="font-family: Affect">
                         Діяльність за напрямком:
                       </h3>
-                      <img src="image/arrow.gif" class="swiper__gif" alt="arrow" />
+                      <img src="image/arrow.gif" class="swiper__gif" alt="Анимация стрелки" loading="lazy" />
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
                     <div class="accordion__content--slide accordion__content--white accordion__content--img">
-                      <img src="image/accardion-img5.png" alt="" />
+                      <picture>
+                        <source srcset="image/accardion-img5.webp" type="image/webp">
+                        <img width="480" height="480" src="image/accardion-img5.png" alt="Галерея 5" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
                     <div class="accordion__content--slide accordion__content--white accordion__content--img">
-                      <img src="image/accardion-img6.png" alt="" />
+                      <picture>
+                        <source srcset="image/accardion-img6.webp" type="image/webp">
+                        <img width="480" height="480" src="image/accardion-img6.png" alt="Галерея 6" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none-des">
@@ -1060,10 +1143,10 @@
                     <div class="accordion__content--slide accordion__content--white">
                       <h3>Реабілітація:</h3>
                       <p>
-                        Розробка та впровадження спеціалізованихпрограм, що
-                        включають новітні терапії: арт, музикальну, ігрову,
-                        все це спрямовано на відновлення емоційної рівноваги
-                        дітей, розвиток та зміцнення соціальних навичок
+                        Розробка та впровадження спеціалізованих програм, що
+                        включають новітні терапії: арт, музикальну, ігрову, все це спрямовано на відновлення емоційної
+                        рівноваги
+                        дітей, розвиток та зміцнення соціальних навичок.
                       </p>
                     </div>
                   </div>
@@ -1078,14 +1161,21 @@
                   </div>
                   <div class="swiper-slide accordion__content--none">
                     <div class="accordion__content--slide accordion__content--slide--img">
-                      <img src="image/accardion-img5.png" alt="">
+                      <picture>
+                        <source srcset="image/accardion-img5.webp" type="image/webp">
+                        <img width="480" height="480" src="image/accardion-img5.png" alt="Галерея 5" loading="lazy" />
+                      </picture>
                     </div>
                   </div>
                   <div class="swiper-slide accordion__content--none">
                     <div class="accordion__content--slide accordion__content--row">
                       <div class="accordion__content--slide-top">
                         <div class="accordion__content--slide-img">
-                          <img src="image/accardion-img6.png" alt="" />
+                          <picture>
+                            <source srcset="image/accardion-img6.webp" type="image/webp">
+                            <img width="480" height="480" src="image/accardion-img6.png" alt="Галерея 6"
+                              loading="lazy" />
+                          </picture>
                         </div>
                         <div class="accordion__content--slide-text">
                           <h4>Індивідуальні та групові сесії:</h4>
@@ -1099,15 +1189,19 @@
                         <div class="accordion__content--slide-text">
                           <h4>Реабілітація:</h4>
                           <p>
-                            Розробка та впровадження спеціалізованихпрограм, що включають новітні терапії: арт,
+                            Розробка та впровадження спеціалізованих програм, що включають новітні терапії: арт,
                             музикальну, ігрову, все це спрямовано на відновлення емоційної рівноваги дітей, розвиток та
-                            зміцнення соціальних навичок
+                            зміцнення соціальних навичок.
                           </p>
                         </div>
                         <div class="accordion__content--slide-bottom accordion__content--slide-bottom--black">
                           <div class="accordion__content--slide-text swiper-slide--open">
                             <div class="accordion__content--slide-text-img">
-                              <img src="image/accardion-img8.png" alt="" />
+                              <picture>
+                                <source srcset="image/accardion-img8.webp" type="image/webp">
+                                <img width="560" height="568" src="image/accardion-img8.png" alt="Галерея 8"
+                                  loading="lazy" />
+                              </picture>
                             </div>
                             <div class="accordion__content--slide-text-tx">
                               <h4>Приєднатися до нас</h4>
@@ -1143,7 +1237,10 @@
       <div class="team__left">
         <div class="team__left--box" data-fancybox data-src="#team">
           <div class="team__left--box--img">
-            <img src="image/team.jpg" alt="Софія Кравченко">
+            <picture>
+              <source srcset="image/team.webp" type="image/webp">
+              <img width="1420" height="1420" src="image/team.jpg" alt="Софія Кравченко" loading="lazy">
+            </picture>
           </div>
           <button>Софія Кравченко<span class="icon-NameArrow-up-right"></span></button>
         </div>
@@ -1153,7 +1250,10 @@
           <div class="team__right--box--row" data-fancybox data-src="#team2">
             <div class="team__right--box--con">
               <div class="team__right--box--img">
-                <img src="image/team2.jpg" alt="Ірина Бондар">
+                <picture>
+                  <source srcset="image/team2.webp" type="image/webp">
+                  <img width="1100" height="820" src="image/team2.jpg" alt="Ірина Бондар" loading="lazy">
+                </picture>
               </div>
               <button>Ірина Бондар<span class="icon-NameArrow-up-right"></span></button>
             </div>
@@ -1161,7 +1261,10 @@
           <div class="team__right--box--row" data-fancybox data-src="#team3">
             <div class="team__right--box--con">
               <div class="team__right--box--img">
-                <img src="image/team3.jpg" alt="Олександр Мельник">
+                <picture>
+                  <source srcset="image/team3.webp" type="image/webp">
+                  <img width="1100" height="820" src="image/team3.jpg" alt="Олександр Мельник" loading="lazy">
+                </picture>
               </div>
               <button>Олександр Мельник<span class="icon-NameArrow-up-right"></span></button>
             </div>
@@ -1171,12 +1274,11 @@
           <h2>Команда фонду</h2>
           <p>Познайомтеся з нашими лідерами, які щодня докладають зусиль, щоб змінити життя на краще.</p>
           <div>
-            <p>Зустрічайте нашу команду - групу натхненних професіоналів, які присвятили себе благородній місії допомоги
+            <p>Зустрічайте нашу команду - групу натхнених професіоналів, які присвятили себе благородній місії допомоги
               дітям, постраждалим від війни. Кожен член нашої команди вносить унікальний вклад у розвиток фонду та
               реалізацію його програм.</p>
-            <p>
-              Від керівництва стратегічними напрямками до організації заходів та розробки інноваційних проектів - наша
-              команда працює як єдиний механізм для забезпечення світлого майбутнього для кожної дитини. </p>
+            <p>Від керівництва стратегічними напрямками до організації заходів та розробки інноваційних проектів - наша
+              команда працює як єдиний механізм для забезпечення світлого майбутнього для кожної дитини.</p>
           </div>
         </div>
       </div>
@@ -1201,15 +1303,15 @@
             <div class="sub-menu__left--form--col">
               <div class="sub-menu__group">
                 <label class="sub-menu__label" for="name">Ваше ім'я</label>
-                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна">
               </div>
               <div class="sub-menu__group">
                 <label class="sub-menu__label" for="phone">Телефон</label>
-                <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX)  XXX  XX  XX" />
+                <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX) XXX XX XX">
               </div>
               <div class="sub-menu__group">
                 <label class="sub-menu__label" for="email">Email</label>
-                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com">
               </div>
             </div>
             <div class="sub-menu__left--form--col sub-menu__left--form--col2">
@@ -1218,14 +1320,14 @@
               <div class="sub-menu__radio">
                 <div class="control-group">
                   <label>
-                    <input type="radio" name="radio" checked />
+                    <input type="radio" name="radio" checked>
                     <span class="custom-radio"></span>
                     <p>Питання</p>
                   </label>
                 </div>
                 <div class="control-group">
                   <label>
-                    <input type="radio" name="radio" />
+                    <input type="radio" name="radio">
                     <span class="custom-radio"></span>
                     <p>Проблема</p>
                   </label>
@@ -1234,8 +1336,7 @@
             </div>
           </form>
           <div class="sub-menu__group sub-menu__needHelp">
-            <button type="submit" class="button--blue">відправити<span class="icon-Namesend"></span>
-            </button>
+            <button type="submit" class="button--blue">відправити<span class="icon-Namesend"></span></button>
           </div>
         </div>
         <div class="sub-menu__right make-donation__right makeDonation__right">
@@ -1249,14 +1350,12 @@
                     м. Київ, вул. Воздвиженська, 18, 04071, Україна
                   </a>
                 </li>
-
                 <li>
                   <a href="#">
                     <span class="icon-Namemail"></span>
                     rescuedfuture@gmail.com
                   </a>
                 </li>
-
                 <li>
                   <a href="#">
                     <span class="icon-Namecall"></span>
@@ -1267,10 +1366,10 @@
               <ul class="make-donation__social">
                 <li class="icon-Nameshare"></li>
                 <li>
-                  <a href="#" class="link--black">facebook</a>
+                  <a href="https://facebook.com/rescuedifuture" class="link--black">facebook</a>
                 </li>
                 <li>
-                  <a href="#" class="link--black">instagram</a>
+                  <a href="https://instagram.com/rescuedifuture" class="link--black">instagram</a>
                 </li>
                 <li>
                   <a href="#" class="link--black">telegram</a>
@@ -1298,8 +1397,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1307,8 +1406,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1316,8 +1415,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1325,8 +1424,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1334,8 +1433,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1343,8 +1442,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1352,8 +1451,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1361,8 +1460,8 @@
           <div class="partner__slider--item swiper-slide">
             <div class="partner__slider--item-col">
               <div class="partner__slider--item-box">
-                <img src="image/Logos.svg" alt="Logos">
-                <a href="#"> <span class="link--black">перейти на сайт</span><span
+                <img width="87" height="48" src="image/Logos.svg" alt="Логотип партнера" loading="lazy">
+                <a href="#"><span class="link--black">перейти на сайт</span><span
                     class="icon-NameArrow-down-right"></span></a>
               </div>
             </div>
@@ -1386,11 +1485,15 @@
     <div class="wrapper">
       <div class="cta__box">
         <div class="cta__box--left">
-          <img src="image/cta.jpg" alt="">
+          <picture>
+            <source srcset="image/cta.webp" type="image/webp">
+            <img width="1460" height="1074" src="image/cta.jpg" alt="Підтримайте наш фонд" loading="lazy">
+          </picture>
         </div>
         <div class="cta__box--right">
-          <h2>Підтримайте фонд зараз! <svg width="72" height="72" viewBox="0 0 72 72" fill="none"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <h2>Підтримайте фонд зараз!
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect width="72" height="72" fill="url(#pattern0_12_839)" />
               <defs>
                 <pattern id="pattern0_12_839" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -1402,7 +1505,7 @@
             </svg>
           </h2>
           <div class="cta__box--right-text">
-            Ви також можете долучитися до нашої місії і допомогти рятувати наше майбутнє. <br /><br />
+            Ви також можете долучитися до нашої місії і допомогти рятувати наше майбутнє. <br><br>
             Кожен ваш донат робить велику справу і дає шанс повернутися до нормального життя більшій кількості дітей!
           </div>
           <div class="cta__box--right-btn">
@@ -1418,7 +1521,7 @@
   <!-- НОВИНИ ТА ЗАХОДИ -->
   <section class="news" id="news">
     <div class="wrapper">
-      <div class="news__tittle">
+      <div class="news__title">
         <h2>НОВИНИ ТА ЗАХОДИ</h2>
         <a href="listing.html" class="button--blue">до всіх статей<span class="icon-Namenewsmode"></span></a>
       </div>
@@ -1426,7 +1529,11 @@
         <div class="news__main--big">
           <div class="news__main--big--bg">
             <div class="news__main--big--img">
-              <img src="image/image.jpg" alt="image">
+              <picture>
+                <source srcset="image/image.webp" type="image/webp">
+                <img width="1444" height="798" src="image/image.jpg"
+                  alt="Вечір Відважних: Перше знайомство з нашим проєктом" loading="lazy">
+              </picture>
             </div>
             <div class="news__main--big--content">
               <div class="news__main--big--content-icon icon-NameArrow-up-right"></div>
@@ -1448,7 +1555,11 @@
                   <h3>Запуск нового освітнього проекту для дітей</h3>
                 </div>
                 <div class="news__slider--item-col-img">
-                  <img src="image/image.jpg" alt="image">
+                  <picture>
+                    <source srcset="image/image.webp" type="image/webp">
+                    <img width="1444" height="798" src="image/image.jpg"
+                      alt="Запуск нового освітнього проекту для дітей" loading="lazy">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -1461,7 +1572,11 @@
                   <h3>Партнерство з міжнародною організацією</h3>
                 </div>
                 <div class="news__slider--item-col-img">
-                  <img src="image/image.jpg" alt="image">
+                  <picture>
+                    <source srcset="image/image.webp" type="image/webp">
+                    <img width="1444" height="798" src="image/image.jpg" alt="Партнерство з міжнародною організацією"
+                      loading="lazy">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -1474,7 +1589,11 @@
                   <h3>Відкриття нового центру психологічної підтримки</h3>
                 </div>
                 <div class="news__slider--item-col-img">
-                  <img src="image/image.jpg" alt="image">
+                  <picture>
+                    <source srcset="image/image.webp" type="image/webp">
+                    <img width="1444" height="798" src="image/image.jpg"
+                      alt="Відкриття нового центру психологічної підтримки" loading="lazy">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -1487,12 +1606,14 @@
                   <h3>Успішна історія реабілітації Максима з Маріуполя</h3>
                 </div>
                 <div class="news__slider--item-col-img">
-                  <img src="image/image.jpg" alt="image">
+                  <picture>
+                    <source srcset="image/image.webp" type="image/webp">
+                    <img width="1444" height="798" src="image/image.jpg"
+                      alt="Успішна історія реабілітації Максима з Маріуполя" loading="lazy">
+                  </picture>
                 </div>
               </div>
             </div>
-
-
           </div>
           <div class="news__slider--nav">
             <div class="news__slider--prev">
@@ -1515,7 +1636,8 @@
         <div class="footer__box--left">
           <div class="footer__box--left-title">
             <a href="index.html">
-              <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+              <img width="125" height="42" src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image"
+                loading="lazy" />
             </a>
             <div class="hero__left--title">
               <h1>Рятуючи майбутнє,<span>змінюємо</span></h1>
@@ -1528,10 +1650,10 @@
             <ul class="make-donation__social">
               <li class="icon-Nameshare"></li>
               <li>
-                <a href="#" class="link--yellow">facebook</a>
+                <a href="https://facebook.com/rescuedifuture" class="link--yellow">facebook</a>
               </li>
               <li>
-                <a href="#" class="link--yellow">instagram</a>
+                <a href="https://instagram.com/rescuedifuture" class="link--yellow">instagram</a>
               </li>
               <li>
                 <a href="#" class="link--yellow">telegram</a>
@@ -1544,21 +1666,38 @@
           <div class="menu__overlay">
             <div class="menu__overlay--card partner-btn">
               <div class="menu__overlay--content">
-                <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png" alt="Emodji" /></span>
+                <span class="menu__overlay--content-Emodji1">
+                  <picture>
+                    <source srcset="image/Emodji.webp" type="image/webp">
+                    <img width="40" height="40" src="image/Emodji.png" alt="Стати нашим партнером Emodji"
+                      loading="lazy" />
+                  </picture>
+                </span>
                 <h3>Стати нашим партнером</h3>
               </div>
             </div>
 
             <div class="menu__overlay--card donate">
               <div class="menu__overlay--content">
-                <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png" alt="Emodji" /></span>
+                <span class="menu__overlay--content-Emodji2">
+                  <picture>
+                    <source srcset="image/Emodji2.webp" type="image/webp">
+                    <img width="40" height="40" src="image/Emodji2.png" alt="Зробити донат Emodji" loading="lazy" />
+                  </picture>
+                </span>
                 <h3>Зробити донат</h3>
               </div>
             </div>
 
             <div class="menu__overlay--card help-me">
               <div class="menu__overlay--content">
-                <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png" alt="Emodji" /></span>
+                <span class="menu__overlay--content-Emodji3">
+                  <picture>
+                    <source srcset="image/Emodji3.webp" type="image/webp">
+                    <img width="40" height="40" src="image/Emodji3.png" alt="Вам потрібна допомога Emodji"
+                      loading="lazy" />
+                  </picture>
+                </span>
                 <h3>Вам потрібна допомога?</h3>
               </div>
             </div>
@@ -1591,24 +1730,28 @@
           <div class="footer__box--right-politica">
             На нашому сайті використовуються файли cookie для оптимізації роботи сайту та надання персоналізованих
             послуг та реклами. Продовжуючи використання сайту, ви погоджуєтесь з нашими <a href="cookie.html"
-              target="_blank">умовами використання
-              файлів cookie</a>. Додаткову інформацію про нашу політику конфіденційності та налаштування файлів cookie
-            можна знайти в розділі <a href="privecy.html" target="_blank">Політика конфіденційності</a>.
+              target="_blank">умовами використання файлів cookie</a>. Додаткову інформацію про нашу політику
+            конфіденційності та налаштування файлів cookie можна знайти в розділі <a href="privacy.html"
+              target="_blank">Політика конфіденційності</a>.
           </div>
         </div>
       </div>
     </div>
     <a href="https://shapoval.agency/?utm_source=dev&utm_medium=site&utm_campaign=yellow.sm.studio" class="shapoval"
       target="_blank">
-      <img src="image/shapoval.svg" alt="">
+      <img src="image/shapoval.svg" alt="Shapoval Agency" loading="lazy">
     </a>
   </footer>
 
+
   <div class="hidden">
-    <div class="team__hidden" id="team">
+    <div class="team__hidden" id="team1">
       <div class="team__hidden--top">
         <div class="team__hidden--img">
-          <img src="image/team.jpg" alt="">
+          <picture>
+            <source srcset="image/team.webp" type="image/webp">
+            <img width="1420" height="1420" src="image/team.jpg" alt="Софія Кравченко" loading="lazy" />
+          </picture>
         </div>
         <div class="team__hidden--title">
           <h3>Софія Кравченко</h3>
@@ -1621,7 +1764,7 @@
         <p>Залучила 100+ волонтерів</p>
       </div>
       <div class="team__hidden--text">
-        Ірина відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Її кампанії зі збору
+        Софія відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Її кампанії зі збору
         коштів не тільки збільшили фінансування фонду, але й підвищили обізнаність суспільства.
       </div>
     </div>
@@ -1631,7 +1774,10 @@
     <div class="team__hidden" id="team2">
       <div class="team__hidden--top">
         <div class="team__hidden--img">
-          <img src="image/team2.jpg" alt="">
+          <picture>
+            <source srcset="image/team2.webp" type="image/webp">
+            <img width="1100" height="820" src="image/team2.jpg" alt="Ірина Бондар" loading="lazy" />
+          </picture>
         </div>
         <div class="team__hidden--title">
           <h3>Ірина Бондар</h3>
@@ -1654,7 +1800,10 @@
     <div class="team__hidden" id="team3">
       <div class="team__hidden--top">
         <div class="team__hidden--img">
-          <img src="image/team3.jpg" alt="">
+          <picture>
+            <source srcset="image/team3.webp" type="image/webp">
+            <img width="1100" height="820" src="image/team3.jpg" alt="Олександр Мельник" loading="lazy" />
+          </picture>
         </div>
         <div class="team__hidden--title">
           <h3>Олександр Мельник</h3>
@@ -1664,11 +1813,11 @@
       <div class="team__hidden--filter">
         <p>40+ PR-кампаній</p>
         <p>Зборів понад 3 мільйони гривень</p>
-        <p>Залучила 100+ волонтерів</p>
+        <p>Залучив 100+ волонтерів</p>
       </div>
       <div class="team__hidden--text">
-        Ірина відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Її кампанії зі збору
-        коштів не тільки збільшили фінансування фонду, але й підвищили обізнаність суспільства.
+        Олександр відіграє ключову роль у залученні уваги до проблем дітей, постраждалих від війни. Його кампанії зі
+        збору коштів не тільки збільшили фінансування фонду, але й підвищили обізнаність суспільства.
       </div>
     </div>
   </div>

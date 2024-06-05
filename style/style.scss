@@ -2320,6 +2320,25 @@ input.switch:checked+.custom-switch::before {
                 width: 136px;
             }
 
+            picture {
+                display: flex;
+                width: 48px;
+                height: 48px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 374.625px;
+                border: 3px solid var(--white-100);
+                z-index: 3;
+                &:nth-of-type(2) {
+                    transform: translateX(-16px);
+                    z-index: 2;
+                }
+
+                &:nth-of-type(3) {
+                    transform: translateX(-32px);
+                    z-index: 1;
+                }
+            }
             img {
                 display: flex;
                 width: 48px;
@@ -2335,15 +2354,7 @@ input.switch:checked+.custom-switch::before {
                     height: 56px;
                 }
 
-                &:nth-of-type(2) {
-                    transform: translateX(-16px);
-                    z-index: 2;
-                }
-
-                &:nth-of-type(3) {
-                    transform: translateX(-32px);
-                    z-index: 1;
-                }
+              
             }
         }
 
@@ -2929,9 +2940,16 @@ input.switch:checked+.custom-switch::before {
                 display: block;
                 height: 100%;
                 width: 100%;
-
+                border-radius: 24px;
+                overflow: hidden;
+                position: relative;
                 .swiper-slide {
                     height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }
@@ -3658,7 +3676,7 @@ input.switch:checked+.custom-switch::before {
             padding: 8px;
             background: var(--white-100);
             border-radius: 24px;
-
+            display: block;
             img {
                 width: 100%;
                 height: 100%;
@@ -5384,14 +5402,9 @@ input.switch:checked+.custom-switch::before {
                 }
 
                 &-img {
-                    display: flex;
                     padding: 8px;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 8px;
-                    flex: 1 0 0;
                     border-radius: 10px;
-
+                    height: 100%;
                     img {
                         border-radius: 10px;
                         width: 100%;
