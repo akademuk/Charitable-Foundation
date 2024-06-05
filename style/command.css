@@ -1,10 +1,14 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
 .loader {
   position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: url(../image/loader.png);
+  background: url("../image/loader.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 9999;
@@ -17,8 +21,9 @@
   transition: opacity 0.5s ease;
 }
 
-.no-scroll {
-  overflow: hidden;
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .loader2 {

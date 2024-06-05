@@ -700,11 +700,10 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('load', function () {
     const loader = document.getElementById('loader');
     if (loader) {
-        loader.style.display = 'none';
+        loader.classList.add('hidden');
     }
     document.body.classList.remove('no-scroll');
 });
-
 // Плавный скрол к якорю
 jQuery(document).ready(function ($) {
 	// Плавный переход к якорю для ссылок на той же странице

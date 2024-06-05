@@ -1,10 +1,14 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
 .loader {
   position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: url(../image/loader.png);
+  background: url('../image/loader.png');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 9999;
@@ -17,10 +21,11 @@
   transition: opacity 0.5s ease;
 }
 
-
-.no-scroll {
-  overflow: hidden;
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
+
 .loader2 {
   width: 54px;
   height: 54px;
@@ -31,6 +36,7 @@
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
+
 .loader2::after,
 .loader2::before {
   content: '';  
@@ -41,12 +47,13 @@
   top: 50%;
   left: 50%;
   transform: scale(0.5) translate(0, 0);
-  background-color: var(--strong-blue);;
+  background-color: var(--strong-blue);
   border-radius: 50%;
   animation: animloader 1.5s infinite ease-in-out;
 }
+
 .loader2::before {
-  background-color:#FFE100;
+  background-color: #FFE100;
   transform: scale(0.5) translate(-48px, -48px);
 }
 
@@ -58,11 +65,13 @@
     transform: rotate(360deg);
   }
 } 
+
 @keyframes animloader {
   50% {
     transform: scale(1) translate(-50%, -50%);
   }
 }
+
 :root {
     // Colors
     --background-1: #f7f9fe;
