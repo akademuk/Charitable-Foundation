@@ -4194,7 +4194,7 @@ input.switch:checked + .custom-switch::before {
 
 .team__hidden {
   width: 320px;
-  padding: 16px 16px 32px 16px;
+  padding: 16px 16px 32px 16px !important;
   border-radius: 12px;
   background: var(--background-1);
 }
@@ -4202,7 +4202,7 @@ input.switch:checked + .custom-switch::before {
   .team__hidden {
     width: 676px;
     border-radius: 24px;
-    padding: 24px 64px 32px 24px;
+    padding: 24px 64px 32px 24px !important;
   }
 }
 .team__hidden--top {
@@ -4328,9 +4328,9 @@ input.switch:checked + .custom-switch::before {
   border-radius: 99px;
   border: 1.5px solid var(--yellow-200);
   background: var(--yellow-source);
-  right: 8px;
+  right: 8px !important;
   z-index: 2;
-  top: 8px;
+  top: 8px !important;
   opacity: 1;
   transition: all 0.4s;
 }
