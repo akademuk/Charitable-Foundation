@@ -696,14 +696,14 @@ document.addEventListener('DOMContentLoaded', function () {
 // Loader
 document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('no-scroll');
+});
 
-    setTimeout(function () {
-        const loader = document.getElementById('loader');
-        if (loader) {
-            loader.style.display = 'none';
-        }
-        document.body.classList.remove('no-scroll');
-    }, 3000);
+window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+    document.body.classList.remove('no-scroll');
 });
 
 // Плавный скрол к якорю
