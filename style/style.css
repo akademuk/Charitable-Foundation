@@ -3820,7 +3820,7 @@ input.switch:checked + .custom-switch::before {
 .team__right--box--row {
   min-height: 376px;
   min-width: 256px;
-  height: 100%;
+  height: inherit;
   gap: 8px;
   flex: 1 0 0;
   border-radius: 12px;
@@ -4622,11 +4622,8 @@ input.switch:checked + .custom-switch::before {
   }
 }
 .cta__box--left {
-  display: flex;
   height: 392px;
   min-width: 240px;
-  align-items: flex-start;
-  flex: 1 0 0;
   border-radius: 10px;
 }
 @media (min-width: 1280px) {
@@ -5242,6 +5239,7 @@ input.switch:checked + .custom-switch::before {
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  text-align: left;
   margin-top: 32px;
   margin-bottom: 8px;
 }
@@ -6720,5 +6718,8 @@ input.switch:checked + .custom-switch::before {
   }
   .team__right--box--row button {
     width: calc(100% - 32px);
+  }
+  .help .make-donation__right {
+    min-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
