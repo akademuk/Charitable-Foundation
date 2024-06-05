@@ -23,6 +23,7 @@ body.no-scroll {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 0;
   height: 100%;
 }
 
@@ -56,6 +57,11 @@ body.no-scroll {
   background-color: var(--strong-blue);
   border-radius: 50%;
   animation: animloader 1.5s infinite ease-in-out;
+}
+
+.loader-image {
+  position: relative;
+  z-index: 3;
 }
 
 .loader2::before {
