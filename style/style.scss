@@ -4078,9 +4078,6 @@ input.switch:checked+.custom-switch::before {
             &--row {
                 min-height: 376px;
                 min-width: 256px;
-                height: inherit;
-                gap: 8px;
-                flex: 1 0 0;
                 border-radius: 12px;
                 background: var(--white-100);
                 position: relative;
@@ -4172,7 +4169,7 @@ input.switch:checked+.custom-switch::before {
             &--img {
                 width: 100%;
                 height: 100%;
-                height: 360px;
+                height: 366px;
                 border-radius: 12px;
 
                 @media(min-width: 1280px) {
@@ -4195,10 +4192,8 @@ input.switch:checked+.custom-switch::before {
             &--con {
                 border-radius: 12px;
                 background: var(--white-100);
-                min-height: 376px;
                 min-width: 256px;
                 padding: 5px;
-                height: 100%;
                 position: relative;
                 @media(min-width: 1280px) {
                     padding: 8px;
