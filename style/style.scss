@@ -4924,10 +4924,15 @@ input.switch:checked+.custom-switch::before {
         }
 
         &--left {
+            display: flex;
             height: 392px;
             min-width: 240px;
+            align-items: flex-start;
+            flex: 1 0 0;
             border-radius: 10px;
-
+            picture {
+                height: 100%;
+            }
             @media(min-width: 1280px) {
                 border-radius: 20px;
                 display: flex;

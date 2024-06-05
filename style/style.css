@@ -4634,9 +4634,15 @@ input.switch:checked + .custom-switch::before {
   }
 }
 .cta__box--left {
+  display: flex;
   height: 392px;
   min-width: 240px;
+  align-items: flex-start;
+  flex: 1 0 0;
   border-radius: 10px;
+}
+.cta__box--left picture {
+  height: 100%;
 }
 @media (min-width: 1280px) {
   .cta__box--left {
