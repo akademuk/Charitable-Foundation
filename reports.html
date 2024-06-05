@@ -907,8 +907,24 @@
 </body>
 
 <script src="script/jquery-3.7.0.min.js"></script>
-<script src="script/swiper-bundle.min.js"></script>
-<script src="script/jquery.fancybox.min.js"></script>
-<script src="script/script.js"></script>
+<script async src="script/swiper-bundle.min.js"></script>
+<script async src="script/jquery.fancybox.min.js"></script>
+<script async src="script/script.js"></script>
+
+
+<script>
+    // Loader
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('no-scroll');
+});
+
+window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.add('hidden');
+    }
+    document.body.classList.remove('no-scroll');
+});
+</script>
 
 </html>

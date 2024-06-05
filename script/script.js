@@ -691,19 +691,6 @@ document.addEventListener('DOMContentLoaded', function () {
     checkAndRemoveItems();
 });
 
-
-// Loader
-document.addEventListener('DOMContentLoaded', function () {
-    document.body.classList.add('no-scroll');
-});
-
-window.addEventListener('load', function () {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        loader.classList.add('hidden');
-    }
-    document.body.classList.remove('no-scroll');
-});
 // Плавный скрол к якорю
 jQuery(document).ready(function ($) {
 	// Плавный переход к якорю для ссылок на той же странице
