@@ -3934,12 +3934,10 @@ input.switch:checked + .custom-switch::before {
 .team__right--box--con {
   border-radius: 12px;
   background: var(--white-100);
-  padding: 4px;
-  width: 100%;
+  min-height: 376px;
+  min-width: 256px;
   padding: 5px;
   height: 100%;
-  border-radius: 12px;
-  background: var(--white-100);
   position: relative;
 }
 @media (min-width: 1280px) {
@@ -6728,5 +6726,9 @@ input.switch:checked + .custom-switch::before {
   }
   .help .make-donation__right {
     min-width: 100%;
+  }
+  .partner__slider--nav .partner__pagination span {
+    width: 10px;
+    height: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
