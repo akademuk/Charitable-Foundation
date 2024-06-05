@@ -1083,14 +1083,9 @@ input.switch:checked+.custom-switch::before {
         background: url(../image/gradient.png);
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
         height: 376px;
         min-width: 256px;
         padding: 8px;
-        flex-direction: column;
-        align-items: center;
-        gap: 48px;
-        flex: 1 0 0;
         border-radius: 12px;
         overflow: hidden;
 
@@ -7153,9 +7148,6 @@ input.switch:checked+.custom-switch::before {
         gap: 16px;
     }
 
-    .sub-menu__right {
-        min-width: auto;
-    }
 
     .team__right--box--row button {
         width: calc(100% - 32px);
