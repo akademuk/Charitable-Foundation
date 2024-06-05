@@ -26,6 +26,12 @@ body.no-scroll {
   z-index: 0;
   height: 100%;
 }
+.loader-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .loader.hidden {
   opacity: 0;
