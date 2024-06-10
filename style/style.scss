@@ -227,6 +227,11 @@ input.switch:checked+.custom-switch::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 
     .video__background {
         bottom: auto;
@@ -2095,10 +2100,11 @@ input.switch:checked+.custom-switch::before {
     background: var(--background-1);
     background-repeat: repeat;
     background-size: auto;
-
+    margin-top: 78px;
     @media(min-width:1280px) {
         padding: 128px 72px 32px 72px;
         max-width: 100%;
+        margin-top: 100px;
     }
 
     .wrapper {
@@ -2259,7 +2265,7 @@ input.switch:checked+.custom-switch::before {
         gap: 24px;
 
         @media(min-width:1280px) {
-            gap: 48px;
+            gap: 51px;
             width: 50%;
             min-width: 426px;
             max-width: 426px;
@@ -2381,7 +2387,7 @@ input.switch:checked+.custom-switch::before {
             }
 
             p {
-                font-family: 'Akzidenz-Grotesk Pro';
+                font-family: 'AkzidenzGroteskPro';
                 color: var(--strong-blue);
                 font-size: 32px;
                 font-style: normal;
@@ -6206,11 +6212,12 @@ input.switch:checked+.custom-switch::before {
 
 .main-all {
     background: var(--background-1);
-
+    margin-top: 78px;
     &__box {
         min-width: 320px;
         max-width: 1279px;
         padding: 64px 32px;
+        margin-top: 100px;
         background: var(--background-1);
 
         @media(min-width: 1280px) {

@@ -29,6 +29,15 @@
 }  
 
 @font-face {
+    font-family: 'AkzidenzGroteskPro';
+    src: url('./../fonts/AkzidenzGroteskPro-MdEx.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}  
+
+
+@font-face {
     font-family: 'Akzidenz-Grotesk Pro';
     src: url('./../fonts/AkzidenzGroteskPro-Light.eot') format('embedded-opentype'),
          url('./../fonts/AkzidenzGroteskPro-Light.woff') format('woff'),
