@@ -6343,14 +6343,14 @@ input.switch:checked + .custom-switch::before {
   min-width: 256px;
   align-items: flex-start;
   flex: 1 0 0;
-  gap: 4px;
+  gap: 1px 2px;
   flex-wrap: wrap;
 }
 @media (min-width: 1280px) {
   .reports__filter--left {
     display: flex;
     max-width: 776px;
-    gap: 2px;
+    gap: 4px;
     align-items: flex-start;
     flex: auto;
   }
