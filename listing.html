@@ -12,96 +12,204 @@
     <link rel="stylesheet" href="style/icons.css">
     <link rel="stylesheet" href="style/command.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Врятоване майбутнє</title>
+    <style>
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 32px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 0;
+            height: 100%;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader2 {
+            width: 54px;
+            height: 54px;
+            display: block;
+            margin: 15px auto;
+            position: relative;
+            color: #ccc;
+            box-sizing: border-box;
+            z-index: 3;
+            animation: rotation 1s linear infinite;
+        }
+
+        .loader2::after,
+        .loader2::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            top: 50%;
+            left: 50%;
+            transform: scale(0.5) translate(0, 0);
+            background-color: var(--strong-blue);
+            border-radius: 50%;
+            animation: animloader 1.5s infinite ease-in-out;
+        }
+
+        .loader-image {
+            position: relative;
+            z-index: 3;
+        }
+
+        .loader2::before {
+            background-color: #FFE100;
+            transform: scale(0.5) translate(-48px, -48px);
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animloader {
+            50% {
+                transform: scale(1) translate(-50%, -50%);
+            }
+        }
+    </style>
+
+    <title>Врятоване майбутнє </title>
 </head>
 
 <body>
-  <!-- Loader -->
-  <div id="loader" class="loader">
-    <div class="loader-img">
-      <picture>
-        <source srcset="image/loader.webp" type="image/webp">
-        <img width="3840" height="2160" src="image/loader.png" alt="loader">
-      </picture>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-img">
+            <picture>
+                <source srcset="image/loader.webp" type="image/webp">
+                <img width="3840" height="2160" src="image/loader.png" alt="loader">
+            </picture>
+        </div>
+        <span class="loader2"></span>
+        <img width="96" height="34" class="loader-image" src="image/logo-text.svg" alt="Врятоване майбутнє">
     </div>
-    <span class="loader2"></span>
-    <img width="96" height="34" class="loader-image" src="image/logo-text.svg" alt="Врятоване майбутнє">
-  </div>
 
     <!-- Фон при открытии меню-->
     <div class="overlay" id="overlay"></div>
 
     <!-- Выпадающий список с помощью-->
     <div class="card-menu__overlay" id="cardMenuOverlay">
-        <button class="close-btn button--yellow">
+        <button class="close-btn button--yellow" aria-label="Закрыть меню">
             <span class="icon-Nameclose"></span>
         </button>
         <div class="card-menu__wrapper">
             <div class="card-menu">
-                <h2>допомога</h2>
+                <h2>Допомога</h2>
                 <div class="menu__overlay">
                     <div class="menu__overlay--card" data-card="card1">
                         <div class="menu__overlay--content">
-                            <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png"
-                                    alt="Emodji" /></span>
+                            <span class="menu__overlay--content-Emodji1">
+                                <picture>
+                                    <source srcset="image/Emodji.webp" type="image/webp">
+                                    <img width="40" height="40" src="image/Emodji.png" alt="Emodji" loading="lazy">
+                                </picture>
+                            </span>
                             <h3>Стати нашим партнером</h3>
                             <p>Приєднатися до партнерської програми</p>
                         </div>
-                        <a href="#" class="menu__overlay--link link--black">почати<span
+                        <a href="#" class="menu__overlay--link link--black">Почати<span
                                 class="icon-NameChevron-Right"></span></a>
                     </div>
 
                     <div class="menu__overlay--card" data-card="card2">
                         <div class="menu__overlay--content">
-                            <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png"
-                                    alt="Emodji" /></span>
+                            <span class="menu__overlay--content-Emodji2">
+                                <picture>
+                                    <source srcset="image/Emodji2.webp" type="image/webp">
+                                    <img width="40" height="40" src="image/Emodji2.png" alt="Emodji" loading="lazy">
+                                </picture>
+                            </span>
                             <h3>Зробити донат</h3>
                             <p>
                                 Допоможіть дітям, які постраждали від війни. Ваш вклад рятує
                                 життя!
                             </p>
                             <div class="menu__overlay--btn">
-                                <button>монобанка</button>
+                                <button>Монобанка</button>
                                 <span>або</span>
-                                <button>за реквізитами</button>
+                                <button>За реквізитами</button>
                             </div>
                         </div>
-                        <a href="#" class="menu__overlay--link link--black">почати<span
+                        <a href="#" class="menu__overlay--link link--black">Почати<span
                                 class="icon-NameChevron-Right"></span></a>
                     </div>
 
                     <div class="menu__overlay--card" data-card="card3">
                         <div class="menu__overlay--content">
-                            <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png"
-                                    alt="Emodji" /></span>
+                            <span class="menu__overlay--content-Emodji3">
+                                <picture>
+                                    <source srcset="image/Emodji3.webp" type="image/webp">
+                                    <img width="40" height="40" src="image/Emodji3.png" alt="Emodji" loading="lazy">
+                                </picture>
+                            </span>
                             <h3>Вам потрібна допомога?</h3>
                             <p>
                                 Зв'яжіться з нами, якщо ви або ваші діти перебуваєте на
                                 окупованій території
                             </p>
                         </div>
-                        <a href="#" class="menu__overlay--link link--black">почати<span
+                        <a href="#" class="menu__overlay--link link--black">Почати<span
                                 class="icon-NameChevron-Right"></span></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="video__background">
-            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+            <video src="image/VideoBackground.mp4" autoplay muted loop loading="lazy"></video>
         </div>
     </div>
 
     <!-- Выпадающий список с помощью "Стати нашим партнером"-->
     <div class="sub-menu__overlay" id="becomeOurPartner">
-        <button class="close-btn button--yellow">
+        <button class="close-btn button--yellow" aria-label="Закрыть меню">
             <span class="icon-Nameclose"></span>
         </button>
         <div class="sub-menu">
             <div class="sub-menu__box">
                 <div class="sub-menu__left">
                     <div class="sub-menu__left--logo">
-                        <a href="#">
-                            <img src="image/logo--mobile.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        <a href="index.html">
+                            <img width="124" height="42" src="image/logo--mobile.svg" alt="Врятоване майбутнє"
+                                class="logo__image" loading="lazy">
                         </a>
                     </div>
                     <div class="sub-menu__left--title">
@@ -112,18 +220,20 @@
                             повернутися до нормального життя більшій кількості дітей!
                         </p>
                     </div>
-                    <form action="" class="sub-menu__left--form">
+                    <form class="sub-menu__left--form">
                         <div class="sub-menu__group">
                             <label class="sub-menu__label" for="name">Ваше ім'я</label>
-                            <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                            <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" required>
                         </div>
                         <div class="sub-menu__group">
                             <label class="sub-menu__label" for="phone">Телефон</label>
-                            <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX)  XXX  XX  XX" />
+                            <input class="sub-menu__input" type="tel" id="phone" placeholder="+38 (0XX) XXX XX XX"
+                                pattern="\+38 \(0\d{2}\) \d{3} \d{2} \d{2}" required>
                         </div>
                         <div class="sub-menu__group">
                             <label class="sub-menu__label" for="email">Email</label>
-                            <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+                            <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com"
+                                required>
                         </div>
                         <div class="sub-menu__group">
                             <button type="submit" class="button--blue">
@@ -136,68 +246,64 @@
                         <div class="sub-menu__slider swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="image/Logos.svg" alt="" />
+                                    <img width="87" height="48" src="image/Logos.svg" alt="Партнер" loading="lazy">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="sub-menu__right">
-                    <img src="image/becomeOurPartner.png" alt="" />
+                    <picture>
+                        <source srcset="image/becomeOurPartner.webp" type="image/webp">
+                        <img width="1444" height="1430" src="image/becomeOurPartner.png" alt="Партнерство"
+                            loading="lazy">
+                    </picture>
                 </div>
             </div>
         </div>
         <div class="video__background">
-            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+            <video src="image/VideoBackground.mp4" autoplay muted loop loading="lazy"></video>
         </div>
     </div>
 
     <!-- Выпадающий список с помощью "Зробити донат до фонду"-->
     <div class="sub-menu__overlay make-donation__overlay" id="makeDonation">
-        <button class="close-btn button--yellow">
+        <button class="close-btn button--yellow" aria-label="Закрыть меню">
             <span class="icon-Nameclose"></span>
         </button>
         <div class="sub-menu make-donation">
             <div class="sub-menu__box">
                 <div class="sub-menu__left make-donation__left">
                     <div class="sub-menu__left--logo">
-                        <a href="#">
-                            <img src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        <a href="index.html">
+                            <img width="124" height="42" src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє"
+                                class="logo__image" loading="lazy">
                         </a>
                     </div>
                     <div class="sub-menu__left--title">
                         <h2>
-                            Зробити донат <br />
+                            Зробити донат <br>
                             до фонду
                         </h2>
                         <p>
@@ -212,7 +318,7 @@
                         <div class="make-donation__value">
                             <label for="value">Сума</label>
                             <div>
-                                <input type="number" id="value" name="amount" value="0" />
+                                <input type="number" id="value" name="amount" value="0" required>
                                 <select id="currency" name="currency" class="currency-selector">
                                     <option value="UAH">UAH</option>
                                     <option value="USD">USD</option>
@@ -267,7 +373,7 @@
                         <div class="make-donation__submit">
                             <p>
                                 Далі Ви будете спрямовані на сторінку введення даних для
-                                здійснення платежу від банку «Монобаню»
+                                здійснення платежу від банку «Монобанк»
                             </p>
                             <button type="submit" id="submitBtn" class="button--blue">
                                 підтримати<span class="icon-Namesend"></span>
@@ -279,7 +385,7 @@
                     <div class="make-donation__right--box">
                         <div class="make-donation__right--header">
                             <h2>За реквізитами</h2>
-                            <select name="currency" class="currency-selector">
+                            <select name="currency" name="currency" class="currency-selector">
                                 <option value="UAH">UAH</option>
                                 <option value="USD">USD</option>
                                 <option value="EUR">EUR</option>
@@ -337,21 +443,22 @@
             </div>
         </div>
         <div class="video__background">
-            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+            <video src="image/VideoBackground.mp4" autoplay muted loop loading="lazy"></video>
         </div>
     </div>
 
     <!-- Выпадающий список с помощью "Вам потрібна допомога?"-->
     <div class="sub-menu__overlay" id="needHelp">
-        <button class="close-btn button--yellow">
+        <button class="close-btn button--yellow" aria-label="Закрыть меню">
             <span class="icon-Nameclose"></span>
         </button>
         <div class="sub-menu">
             <div class="sub-menu__box">
                 <div class="sub-menu__left needHelp__left">
                     <div class="sub-menu__left--logo">
-                        <a href="#">
-                            <img src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє" class="logo__image" />
+                        <a href="index.html">
+                            <img width="124" height="42" src="image/logo--mobile-yellow.svg" alt="Врятоване майбутнє"
+                                class="logo__image" loading="lazy">
                         </a>
                     </div>
                     <div class="sub-menu__left--title">
@@ -366,35 +473,38 @@
                     <form class="sub-menu__left--form">
                         <div class="sub-menu__left--form--col">
                             <div class="sub-menu__group">
-                                <label class="sub-menu__label" for="name">Ваше ім'я</label>
-                                <input class="sub-menu__input" type="text" id="name" placeholder="Напр., Мар'яна" />
+                                <label class="sub-menu__label" for="name2">Ваше ім'я</label>
+                                <input class="sub-menu__input" type="text" id="name2" placeholder="Напр., Мар'яна"
+                                    required>
                             </div>
                             <div class="sub-menu__group">
-                                <label class="sub-menu__label" for="phone">Телефон</label>
-                                <input class="sub-menu__input" type="tel" id="phone"
-                                    placeholder="+38 (0XX)  XXX  XX  XX" />
+                                <label class="sub-menu__label" for="phone2">Телефон</label>
+                                <input class="sub-menu__input" type="tel" id="phone2" placeholder="+38 (0XX) XXX XX XX"
+                                    pattern="\+38 \(0\d{2}\) \d{3} \d{2} \d{2}" required>
                             </div>
                             <div class="sub-menu__group">
-                                <label class="sub-menu__label" for="email">Email</label>
-                                <input class="sub-menu__input" type="email" id="email" placeholder="name@gmail.com" />
+                                <label class="sub-menu__label" for="email2">Email</label>
+                                <input class="sub-menu__input" type="email" id="email2" placeholder="name@gmail.com"
+                                    required>
                             </div>
                         </div>
                         <div class="sub-menu__left--form--col">
                             <label for="textarea">Текст повідомлення</label>
-                            <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут"></textarea>
+                            <textarea name="textarea" id="textarea" placeholder="Почніть друкувати тут"
+                                required></textarea>
                             <div class="sub-menu__radio">
                                 <div class="control-group">
                                     <label>
-                                        <input type="radio" name="radio" checked />
+                                        <input type="radio" name="radio" value="question" checked>
                                         <span class="custom-radio"></span>
-                                        <p>Питання</p>
+                                        <b>Питання</b>
                                     </label>
                                 </div>
                                 <div class="control-group">
                                     <label>
-                                        <input type="radio" name="radio" />
+                                        <input type="radio" name="radio" value="problem">
                                         <span class="custom-radio"></span>
-                                        <p>Проблема</p>
+                                        <b>Проблема</b>
                                     </label>
                                 </div>
                             </div>
@@ -417,16 +527,14 @@
                                         м. Київ, вул. Воздвиженська, 18, 04071, Україна
                                     </a>
                                 </li>
-
                                 <li>
-                                    <a href="#">
+                                    <a href="mailto:rescuedfuture@gmail.com">
                                         <span class="icon-Namemail"></span>
                                         rescuedfuture@gmail.com
                                     </a>
                                 </li>
-
                                 <li>
-                                    <a href="#">
+                                    <a href="tel:+380931080687">
                                         <span class="icon-Namecall"></span>
                                         +38 093 108 06 87
                                     </a>
@@ -448,15 +556,16 @@
                         <div class="make-donation__right--center">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.293856134085!2d30.45970557684722!3d50.37972039245361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8fcaff2a83d%3A0x4d6350338f1890ad!2z0LLRg9C70LjRhtGPINCS0LDRgdC40LvRjyDQmtCw0YHRltGP0L3QsCwgMi8xLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1716812111111!5m2!1suk!2sua"
-                                width="706" height="396" style="border: 0" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="706" height="396" style="border: 0" allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Google Maps location of [Location Description]"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="video__background">
-            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+            <video src="image/VideoBackground.mp4" autoplay muted loop loading="lazy"></video>
         </div>
     </div>
 
@@ -464,10 +573,11 @@
     <div class="burger-menu__overlay" id="burgerMenuOverlay">
         <div class="burger-menu__scroll">
             <div class="burger-menu__headeer">
-                <a href="#">
-                    <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+                <a href="index.html">
+                    <img width="125" height="42" src="image/logo--burger.svg" alt="Врятоване майбутнє"
+                        class="logo__image" loading="lazy">
                 </a>
-                <button class="burger-menu__close button--yellow">
+                <button class="burger-menu__close button--yellow" aria-label="Закрыть меню">
                     <span class="icon-Nameclose"></span>
                 </button>
             </div>
@@ -522,44 +632,45 @@
     <!-- Header -->
     <header class="header">
         <div class="video__background">
-            <video src="image/VideoBackground.mp4" autoplay muted loop></video>
+            <video src="image/VideoBackground.mp4" autoplay muted loop loading="lazy"></video>
         </div>
         <div class="wrapper">
             <div class="header__container">
                 <div class="header__logo">
                     <a href="index.html">
-                        <img src="image/logo--blue.svg" alt="Врятоване майбутнє" class="logo__image" />
-                      </a>
+                        <img width="151" height="50" src="image/logo--blue.svg" alt="Врятоване майбутнє"
+                            class="logo__image" loading="lazy">
+                    </a>
                 </div>
                 <nav class="header__nav nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="index.html" class="header__link link--black">головна</a>
+                            <a href="index.html" class="header__link link--black">Головна</a>
                         </li>
                         <li class="header__item">
-                            <a href="index.html#meta" class="header__link link--black">мета</a>
+                            <a href="index.html#meta" class="header__link link--black">Мета</a>
                         </li>
                         <li class="header__item">
-                            <a href="index.html#partner" class="header__link link--black">партнери</a>
+                            <a href="index.html#partner" class="header__link link--black">Партнери</a>
                         </li>
                         <li class="header__item">
-                            <a href="index.html#news" class="header__link link--black">новини</a>
+                            <a href="index.html#news" class="header__link link--black">Новини</a>
                         </li>
                         <li class="header__item">
-                            <a href="reports.html" class="header__link link--black">звіти</a>
+                            <a href="reports.html" class="header__link link--black">Звіти</a>
                         </li>
                         <li class="header__item">
-                            <a href="index.html#team" class="header__link link--black">команда</a>
+                            <a href="index.html#team" class="header__link link--black">Команда</a>
                         </li>
                         <li class="header__item">
-                            <a href="contact.html" class="header__link link--black">контакти</a>
+                            <a href="contact.html" class="header__link link--black">Контакти</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header__info">
                     <div class="header__hotline">
                         <div class="header__dropdown">
-                            <button class="header__dropdown--toggle">
+                            <button class="header__dropdown--toggle" aria-label="Контактна інформація">
                                 +38 093 108 06 87
                             </button>
                             <div class="header__dropdown--menu">
@@ -568,18 +679,18 @@
                                 <a href="https://facebook.com/rescuedifuture" class="header__dropdown--item"
                                     target="_blank"><span>Facebook</span>@rescuedfuture</a>
                                 <a href="https://instagram.com/rescuedifuture" class="header__dropdown--item"
-                                    target="_blank"><span>instagram</span>@rescuedfuture</a>
+                                    target="_blank"><span>Instagram</span>@rescuedfuture</a>
                             </div>
                         </div>
                     </div>
                     <div class="header__donate">
                         <button class="header__btn button--yellow">
-                            допомогти <span class="icon-NamePlus"></span>
+                            Допомогти <span class="icon-NamePlus"></span>
                         </button>
                     </div>
                 </div>
                 <div class="header__menu button--yellow" id="burgerMenu">
-                    <span>меню</span>
+                    <span>Меню</span>
                     <div class="header__menu--icon" id="burgerMenuIcon">
                         <span class="header__menu--icon-line"></span>
                         <span class="header__menu--icon-line"></span>
@@ -589,7 +700,6 @@
             </div>
         </div>
     </header>
-
     <main class="main-all">
         <div class="main-all__banner main-all__banner-bg">
             <div class="wrapper">
@@ -608,17 +718,19 @@
             <div class="wrapper">
                 <div class="news__main--big">
                     <div class="news__main--big--bg">
-                      <div class="news__main--big--img">
-                        <img src="image/gallery4.png" alt="image">
-                      </div>
-                      <div class="news__main--big--content">
-                        <div class="news__main--big--content-icon icon-NameArrow-up-right"></div>
-                        <div class="news__main--big--content-date">14 грудня 2023 р.</div>
-                        <h3>Вечір Відважних: Перше знайомство з нашим проєктом в Києві 10 грудня 2023 року</h3>
-                        <p>10 грудня 2023 року в Києві ми провели наше перше знайомство - Вечір Відважних. На якому детально
-                          розповідали про наш проєкт, знайомили вас з нашими амбасадорами та партнерами. Презентували напрямки
-                          роботи та наше бачення.</p>
-                      </div>
+                        <div class="news__main--big--img">
+                            <img src="image/gallery4.png" alt="image">
+                        </div>
+                        <div class="news__main--big--content">
+                            <div class="news__main--big--content-icon icon-NameArrow-up-right"></div>
+                            <div class="news__main--big--content-date">14 грудня 2023 р.</div>
+                            <h3>Вечір Відважних: Перше знайомство з нашим проєктом в Києві 10 грудня 2023 року</h3>
+                            <p>10 грудня 2023 року в Києві ми провели наше перше знайомство - Вечір Відважних. На якому
+                                детально
+                                розповідали про наш проєкт, знайомили вас з нашими амбасадорами та партнерами.
+                                Презентували напрямки
+                                роботи та наше бачення.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="main-all__box--con">
@@ -899,7 +1011,8 @@
                 <div class="footer__box--left">
                     <div class="footer__box--left-title">
                         <a href="index.html">
-                            <img src="image/logo--burger.svg" alt="Врятоване майбутнє" class="logo__image" />
+                            <img width="125" height="42" src="image/logo--burger.svg" alt="Врятоване майбутнє"
+                                class="logo__image" loading="lazy">
                         </a>
                         <div class="hero__left--title">
                             <h1>Рятуючи майбутнє,<span>змінюємо</span></h1>
@@ -912,10 +1025,10 @@
                         <ul class="make-donation__social">
                             <li class="icon-Nameshare"></li>
                             <li>
-                                <a href="#" class="link--yellow">facebook</a>
+                                <a href="https://facebook.com/rescuedifuture" class="link--yellow">facebook</a>
                             </li>
                             <li>
-                                <a href="#" class="link--yellow">instagram</a>
+                                <a href="https://instagram.com/rescuedifuture" class="link--yellow">instagram</a>
                             </li>
                             <li>
                                 <a href="#" class="link--yellow">telegram</a>
@@ -928,24 +1041,39 @@
                     <div class="menu__overlay">
                         <div class="menu__overlay--card partner-btn">
                             <div class="menu__overlay--content">
-                                <span class="menu__overlay--content-Emodji1"><img src="image/Emodji.png"
-                                        alt="Emodji" /></span>
+                                <span class="menu__overlay--content-Emodji1">
+                                    <picture>
+                                        <source srcset="image/Emodji.webp" type="image/webp">
+                                        <img width="40" height="40" src="image/Emodji.png"
+                                            alt="Стати нашим партнером Emodji" loading="lazy">
+                                    </picture>
+                                </span>
                                 <h3>Стати нашим партнером</h3>
                             </div>
                         </div>
 
                         <div class="menu__overlay--card donate">
                             <div class="menu__overlay--content">
-                                <span class="menu__overlay--content-Emodji2"><img src="image/Emodji2.png"
-                                        alt="Emodji" /></span>
+                                <span class="menu__overlay--content-Emodji2">
+                                    <picture>
+                                        <source srcset="image/Emodji2.webp" type="image/webp">
+                                        <img width="40" height="40" src="image/Emodji2.png" alt="Зробити донат Emodji"
+                                            loading="lazy">
+                                    </picture>
+                                </span>
                                 <h3>Зробити донат</h3>
                             </div>
                         </div>
 
                         <div class="menu__overlay--card help-me">
                             <div class="menu__overlay--content">
-                                <span class="menu__overlay--content-Emodji3"><img src="image/Emodji3.png"
-                                        alt="Emodji" /></span>
+                                <span class="menu__overlay--content-Emodji3">
+                                    <picture>
+                                        <source srcset="image/Emodji3.webp" type="image/webp">
+                                        <img width="40" height="40" src="image/Emodji3.png"
+                                            alt="Вам потрібна допомога Emodji" loading="lazy">
+                                    </picture>
+                                </span>
                                 <h3>Вам потрібна допомога?</h3>
                             </div>
                         </div>
@@ -979,25 +1107,39 @@
                         На нашому сайті використовуються файли cookie для оптимізації роботи сайту та надання
                         персоналізованих
                         послуг та реклами. Продовжуючи використання сайту, ви погоджуєтесь з нашими <a
-                            href="cookie.html" target="_blank">умовами використання
-                            файлів cookie</a>. Додаткову інформацію про нашу політику конфіденційності та налаштування
-                        файлів cookie
-                        можна знайти в розділі <a href="privecy.html" target="_blank">Політика конфіденційності</a>.
+                            href="cookie.html" target="_blank">умовами використання файлів cookie</a>. Додаткову
+                        інформацію про нашу політику
+                        конфіденційності та налаштування файлів cookie можна знайти в розділі <a href="privacy.html"
+                            target="_blank">Політика конфіденційності</a>.
                     </div>
                 </div>
             </div>
         </div>
         <a href="https://shapoval.agency/?utm_source=dev&utm_medium=site&utm_campaign=yellow.sm.studio" class="shapoval"
             target="_blank">
-            <img src="image/shapoval.svg" alt="">
+            <img src="image/shapoval.svg" alt="Shapoval Agency" loading="lazy">
         </a>
     </footer>
 
-</body>
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/jquery.fancybox.min.js"></script>
+    <script src="script/script.js"></script>
 
-<script src="script/jquery-3.7.0.min.js"></script>
-<script src="script/swiper-bundle.min.js"></script>
-<script src="script/jquery.fancybox.min.js"></script>
-<script src="script/script.js"></script>
+    <script>
+        // Loader
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('no-scroll');
+        });
+
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+            document.body.classList.remove('no-scroll');
+        });
+    </script>
+</body>
 
 </html>

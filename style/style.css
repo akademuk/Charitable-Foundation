@@ -2730,6 +2730,45 @@ input.switch:checked + .custom-switch::before {
   display: none;
   overflow: hidden;
 }
+.gallery__box--right .gallery-next {
+  width: 32px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-left: auto;
+  transition: all 0.4s;
+}
+.gallery__box--right .gallery-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.gallery__box--right .gallery-next:hover span::before {
+  color: #DBDBF0;
+}
+.gallery__box--right .gallery-prev {
+  width: 32px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  transition: all 0.4s;
+}
+.gallery__box--right .gallery-prev:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.gallery__box--right .gallery-prev:hover span::before {
+  color: #DBDBF0;
+}
 @media (min-width: 1280px) {
   .gallery__box--right {
     display: flex;
@@ -3915,7 +3954,7 @@ input.switch:checked + .custom-switch::before {
 .team__right--box--img {
   width: 100%;
   height: 100%;
-  height: 366px;
+  height: 360px;
   border-radius: 12px;
 }
 @media (min-width: 1280px) {
@@ -4130,8 +4169,8 @@ input.switch:checked + .custom-switch::before {
 }
 @media (min-width: 1280px) {
   .help .sub-menu__group button {
-    margin-top: 14px;
-    gap: 8px;
+    margin-top: 24px;
+    gap: 13px;
   }
 }
 .help .make-donation__right {
@@ -4677,7 +4716,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .cta__box--right {
     padding: 64px 48px 64px 68px;
-    gap: 32px;
+    gap: 33px;
     max-width: 730px;
   }
 }
@@ -4746,7 +4785,7 @@ input.switch:checked + .custom-switch::before {
 @media (min-width: 1280px) {
   .cta__box--right-btn button {
     padding: 14px 24px;
-    gap: 8px;
+    gap: 5px;
   }
   .cta__box--right-btn button span::before {
     font-size: 24px;
@@ -5188,6 +5227,11 @@ input.switch:checked + .custom-switch::before {
   background-size: cover;
 }
 @media (min-width: 1280px) {
+  .footer .menu__overlay--card h3::after {
+    margin-top: -1px;
+  }
+}
+@media (min-width: 1280px) {
   .footer {
     max-width: 100%;
     padding: 64px 72px 48px 72px;
@@ -5243,7 +5287,7 @@ input.switch:checked + .custom-switch::before {
 }
 @media (min-width: 1280px) {
   .footer__box--left-title a img {
-    content: url("../image/logo--yellow.svg");
+    content: url("../image/logo--yellow-des.svg");
   }
 }
 .footer__box--left-title h1 {
@@ -5270,7 +5314,8 @@ input.switch:checked + .custom-switch::before {
     line-height: 105%;
     letter-spacing: -0.58px;
     gap: 11px;
-    margin-bottom: 13px;
+    margin-bottom: 7px;
+    margin-top: 40px;
   }
 }
 .footer__box--left-title h1 span {
